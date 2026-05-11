@@ -1,0 +1,1856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oracle GoldenGate — Complete Training Course</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23C74634'/><text y='.9em' font-size='70' x='15'>⬡</text></svg>">
+</head>
+<body>
+
+<!-- Mobile toggle -->
+<button id="menu-toggle" aria-label="Open menu">☰</button>
+<div id="overlay"></div>
+
+<!-- ══════════════════════════════════════
+     SIDEBAR
+══════════════════════════════════════ -->
+<nav id="sidebar">
+  <div class="sidebar-header">
+    <a href="#" class="sidebar-logo">
+      <div class="sidebar-logo-icon">⬡</div>
+      <div>
+        <div class="sidebar-logo-text">Oracle <span>GoldenGate</span></div>
+      </div>
+    </a>
+    <div class="sidebar-subtitle">Complete Training Course</div>
+  </div>
+
+  <div class="sidebar-progress">
+    <div class="progress-label">
+      <span>Progress</span>
+      <span id="progress-pct">0%</span>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+  </div>
+
+  <div class="sidebar-search">
+    <input type="search" id="sidebar-search" placeholder="Search modules…" autocomplete="off">
+  </div>
+
+  <div class="sidebar-nav">
+    <div class="nav-section-label">Getting Started</div>
+    <a class="nav-item active" data-section="mod-landing">
+      <span class="nav-num">00</span> Course Overview
+    </a>
+
+    <div class="nav-section-label">Foundations</div>
+    <a class="nav-item" data-section="mod-intro">
+      <span class="nav-num">01</span> Introduction & Use Cases
+    </a>
+    <a class="nav-item" data-section="mod-arch">
+      <span class="nav-num">02</span> Architecture Deep Dive
+    </a>
+
+    <div class="nav-section-label">Setup & Configuration</div>
+    <a class="nav-item" data-section="mod-install">
+      <span class="nav-num">03</span> Installation & Setup
+    </a>
+    <a class="nav-item" data-section="mod-unidirectional">
+      <span class="nav-num">04</span> Unidirectional Replication
+      <span class="nav-badge">LAB</span>
+    </a>
+    <a class="nav-item" data-section="mod-datapump">
+      <span class="nav-num">05</span> Data Pump Process
+    </a>
+    <a class="nav-item" data-section="mod-initialload">
+      <span class="nav-num">06</span> Initial Data Load
+    </a>
+
+    <div class="nav-section-label">Advanced Features</div>
+    <a class="nav-item" data-section="mod-ddl">
+      <span class="nav-num">07</span> DDL Replication
+    </a>
+    <a class="nav-item" data-section="mod-transform">
+      <span class="nav-num">08</span> Filtering & Transformation
+    </a>
+    <a class="nav-item" data-section="mod-monitor">
+      <span class="nav-num">09</span> Monitoring & Administration
+    </a>
+    <a class="nav-item" data-section="mod-bidir">
+      <span class="nav-num">10</span> Bidirectional Replication
+    </a>
+    <a class="nav-item" data-section="mod-ma">
+      <span class="nav-num">11</span> Microservices Architecture
+    </a>
+
+    <div class="nav-section-label">Operations</div>
+    <a class="nav-item" data-section="mod-security">
+      <span class="nav-num">12</span> Security
+    </a>
+    <a class="nav-item" data-section="mod-perf">
+      <span class="nav-num">13</span> Performance Tuning
+    </a>
+    <a class="nav-item" data-section="mod-trouble">
+      <span class="nav-num">14</span> Troubleshooting Guide
+    </a>
+
+    <div class="nav-section-label">Practice & Assessment</div>
+    <a class="nav-item" data-section="mod-labs">
+      <span class="nav-num">15</span> Practice Labs
+      <span class="nav-badge">5 LABS</span>
+    </a>
+    <a class="nav-item" data-section="mod-assess">
+      <span class="nav-num">16</span> Assessments
+      <span class="nav-badge">20 Q</span>
+    </a>
+    <a class="nav-item" data-section="mod-ref">
+      <span class="nav-num">17</span> Quick Reference
+    </a>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════
+     MAIN
+══════════════════════════════════════ -->
+<div id="main">
+
+  <!-- Top bar -->
+  <div id="topbar">
+    <div class="topbar-breadcrumb" id="breadcrumb">
+      Oracle GoldenGate Course &nbsp;›&nbsp; <strong>Overview</strong>
+    </div>
+    <div class="topbar-actions">
+      <button class="btn-sm" onclick="window.print()">🖨 Print</button>
+      <a class="btn-sm primary" href="https://github.com" target="_blank">★ Star on GitHub</a>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div id="content">
+
+    <!-- ══ LANDING ══ -->
+    <section class="module" id="mod-landing">
+      <div style="background:var(--navy);border-radius:12px;padding:48px 44px;margin-bottom:48px;overflow:hidden;position:relative;">
+        <div style="position:absolute;top:-40px;right:-40px;width:280px;height:280px;background:radial-gradient(circle,rgba(199,70,52,.2),transparent 70%);border-radius:50%;"></div>
+        <div class="landing-kicker">Oracle GoldenGate — Full Course</div>
+        <h1 class="landing-title">Master <em>GoldenGate</em><br>From Zero to DBA</h1>
+        <p class="landing-desc">A comprehensive, hands-on course covering architecture, installation, configuration, administration, performance tuning, and troubleshooting — built for junior DBAs who want to truly understand and implement Oracle GoldenGate.</p>
+        <div class="landing-stats">
+          <div class="stat-item"><div class="stat-num">17</div><div class="stat-label">Modules</div></div>
+          <div class="stat-item"><div class="stat-num">5</div><div class="stat-label">Practice Labs</div></div>
+          <div class="stat-item"><div class="stat-num">20</div><div class="stat-label">Quiz Questions</div></div>
+          <div class="stat-item"><div class="stat-num">50+</div><div class="stat-label">Code Examples</div></div>
+        </div>
+        <button class="btn-primary" id="start-course">Start Course →</button>
+      </div>
+
+      <h2>All Modules</h2>
+      <div class="module-cards-grid">
+        <a class="module-card" data-section="mod-intro" href="#mod-intro"><div class="module-card-num">MODULE 01</div><div class="module-card-title">Introduction & Use Cases</div><div class="module-card-desc">What is GoldenGate, why use it, and how it compares to alternatives.</div></a>
+        <a class="module-card" href="#mod-arch"><div class="module-card-num">MODULE 02</div><div class="module-card-title">Architecture Deep Dive</div><div class="module-card-desc">Extract, Trail Files, Data Pump, Replicat, Manager — every component explained.</div></a>
+        <a class="module-card" href="#mod-install"><div class="module-card-num">MODULE 03</div><div class="module-card-title">Installation & Setup</div><div class="module-card-desc">Step-by-step installation guide for Linux with all prerequisites.</div></a>
+        <a class="module-card" href="#mod-unidirectional"><div class="module-card-num">MODULE 04</div><div class="module-card-title">Unidirectional Replication</div><div class="module-card-desc">Your first working replication setup from source to target — end to end.</div></a>
+        <a class="module-card" href="#mod-datapump"><div class="module-card-num">MODULE 05</div><div class="module-card-title">Data Pump Process</div><div class="module-card-desc">Add a Data Pump for production-grade resilience and fan-out.</div></a>
+        <a class="module-card" href="#mod-initialload"><div class="module-card-num">MODULE 06</div><div class="module-card-title">Initial Data Load</div><div class="module-card-desc">Populate the target with a consistent snapshot before starting replication.</div></a>
+        <a class="module-card" href="#mod-ddl"><div class="module-card-num">MODULE 07</div><div class="module-card-title">DDL Replication</div><div class="module-card-desc">Replicate schema changes (CREATE, ALTER, DROP) automatically.</div></a>
+        <a class="module-card" href="#mod-transform"><div class="module-card-num">MODULE 08</div><div class="module-card-title">Filtering & Transformation</div><div class="module-card-desc">WHERE clauses, COLMAP, tokens, and built-in conversion functions.</div></a>
+        <a class="module-card" href="#mod-monitor"><div class="module-card-num">MODULE 09</div><div class="module-card-title">Monitoring & Administration</div><div class="module-card-desc">GGSCI command reference, lag monitoring, ABEND handling.</div></a>
+        <a class="module-card" href="#mod-bidir"><div class="module-card-num">MODULE 10</div><div class="module-card-title">Bidirectional Replication</div><div class="module-card-desc">Active-active setups, loop prevention, and conflict resolution.</div></a>
+        <a class="module-card" href="#mod-ma"><div class="module-card-num">MODULE 11</div><div class="module-card-title">Microservices Architecture</div><div class="module-card-desc">REST API, web console, and the modern GGG deployment model.</div></a>
+        <a class="module-card" href="#mod-security"><div class="module-card-num">MODULE 12</div><div class="module-card-title">Security</div><div class="module-card-desc">Password encryption, wallets, trail encryption, and TLS.</div></a>
+        <a class="module-card" href="#mod-perf"><div class="module-card-num">MODULE 13</div><div class="module-card-title">Performance Tuning</div><div class="module-card-desc">Parallel Replicat, BATCHSQL, I/O tuning, and lag reduction.</div></a>
+        <a class="module-card" href="#mod-trouble"><div class="module-card-num">MODULE 14</div><div class="module-card-title">Troubleshooting Guide</div><div class="module-card-desc">Common errors, LOGDUMP, recovery procedures, and re-sync.</div></a>
+        <a class="module-card" href="#mod-labs"><div class="module-card-num">MODULE 15</div><div class="module-card-title">Practice Labs</div><div class="module-card-desc">5 hands-on labs with step-by-step instructions and success criteria.</div></a>
+        <a class="module-card" href="#mod-assess"><div class="module-card-num">MODULE 16</div><div class="module-card-title">Assessments</div><div class="module-card-desc">20 interactive quiz questions covering all modules.</div></a>
+        <a class="module-card" href="#mod-ref"><div class="module-card-num">MODULE 17</div><div class="module-card-title">Quick Reference</div><div class="module-card-desc">Cheat sheet, parameter templates, SQL health checks, and glossary.</div></a>
+      </div>
+    </section>
+
+    <!-- ══ MODULE 1: INTRODUCTION ══ -->
+    <section class="module" id="mod-intro">
+      <div class="module-header">
+        <div class="module-tag">Module 01</div>
+        <h1 class="module-title">Introduction to Oracle GoldenGate</h1>
+        <p class="module-intro">Oracle GoldenGate is a comprehensive software package for real-time data integration and replication in heterogeneous IT environments. Before touching a single configuration file, understand what it does, why it exists, and when to use it.</p>
+      </div>
+
+      <h2>What Is Oracle GoldenGate?</h2>
+      <p>GoldenGate is a <strong>log-based, real-time data replication and integration platform</strong>. It captures transactional changes from a source database's redo/archive logs and delivers them to one or more target systems with sub-second latency — all with minimal impact on the source database because it never issues SELECT queries against your tables.</p>
+
+      <div class="callout note">
+        <div class="callout-icon">💡</div>
+        <div><strong>Key insight for junior DBAs</strong> GoldenGate reads the database transaction log (redo log), not the actual tables. This means it has near-zero performance impact on source production databases — one of its biggest advantages over trigger-based or query-based replication.</div>
+      </div>
+
+      <h2>Core Capabilities</h2>
+      <ul>
+        <li><strong>Real-time CDC</strong> — Captures inserts, updates, deletes from redo logs with sub-second latency</li>
+        <li><strong>Heterogeneous replication</strong> — Oracle to MySQL, SQL Server, PostgreSQL, DB2, Kafka, flat files, and more</li>
+        <li><strong>Bidirectional (active-active)</strong> — Both databases accept writes simultaneously for high availability</li>
+        <li><strong>Data transformation</strong> — Filter rows, remap columns, apply functions during replication</li>
+        <li><strong>Zero-downtime migrations</strong> — Migrate between platforms, versions, or clouds with no outage</li>
+        <li><strong>Initial load + ongoing sync</strong> — Bootstrap the target then switch to continuous replication seamlessly</li>
+      </ul>
+
+      <h2>Common Use Cases</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Use Case</th><th>Description</th><th>Typical Config</th></tr></thead>
+          <tbody>
+            <tr><td>Disaster Recovery</td><td>Maintain a hot standby database in sync with production, ready for immediate failover</td><td>Oracle → Oracle (unidirectional)</td></tr>
+            <tr><td>Zero-Downtime Migration</td><td>Move data between versions, OS, or cloud platforms while the source stays online</td><td>Oracle 12c → Oracle 19c / Cloud</td></tr>
+            <tr><td>Real-Time Analytics</td><td>Feed a data warehouse or reporting system with near-real-time data changes</td><td>Oracle OLTP → Oracle DW / Kafka</td></tr>
+            <tr><td>Active-Active HA</td><td>Two or more databases accept writes; changes flow in both directions</td><td>Oracle ↔ Oracle (bidirectional)</td></tr>
+            <tr><td>Data Distribution</td><td>Fan out data from one master source to many downstream consumers</td><td>1 source → multiple targets</td></tr>
+            <tr><td>Audit / Compliance</td><td>Capture all data changes for regulatory compliance or audit trails</td><td>Oracle → Kafka / flat files</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>GoldenGate vs. Other Technologies</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Feature</th><th>GoldenGate</th><th>Oracle Streams</th><th>Data Guard</th><th>LogMiner</th></tr></thead>
+          <tbody>
+            <tr><td>Log-based CDC</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+            <tr><td>Heterogeneous DBs</td><td>✅ Yes</td><td>❌ No</td><td>❌ No</td><td>❌ No</td></tr>
+            <tr><td>Bidirectional</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td><td>❌ No</td></tr>
+            <tr><td>Row-level Filtering</td><td>✅ Yes</td><td>⚠️ Limited</td><td>❌ No</td><td>❌ No</td></tr>
+            <tr><td>Column Transformation</td><td>✅ Yes</td><td>⚠️ Limited</td><td>❌ No</td><td>❌ No</td></tr>
+            <tr><td>Typical Latency</td><td>Sub-second</td><td>Seconds</td><td>Sub-second</td><td>Seconds</td></tr>
+            <tr><td>Source Impact</td><td>✅ Minimal</td><td>⚠️ Some</td><td>⚠️ Some</td><td>⚠️ Some</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ══ MODULE 2: ARCHITECTURE ══ -->
+    <section class="module" id="mod-arch">
+      <div class="module-header">
+        <div class="module-tag">Module 02</div>
+        <h1 class="module-title">GoldenGate Architecture Deep Dive</h1>
+        <p class="module-intro">Understanding every component, how they interact, and why they're designed that way is the foundation of all GoldenGate work. Don't skip this module.</p>
+      </div>
+
+      <h2>High-Level Data Flow</h2>
+      <div class="arch-diagram">
+<span class="arch-label">──── SOURCE SERVER ─────────────────────────────────────────────── TARGET SERVER ────</span>
+
+  <span class="arch-box">Oracle DB</span>
+      │  <span class="arch-label">(Redo / Archive Logs)</span>
+      ▼
+  <span class="arch-box">EXTRACT Process</span>  ──writes──▶  <span class="arch-box">Local Trail</span>  (./dirdat/ex000001 …)
+                                         │
+                                         │  read by
+                                         ▼
+                                   <span class="arch-box">DATA PUMP</span>  ──TCP/IP──▶  <span class="arch-box">COLLECTOR</span>
+                                                                       │  writes
+                                                                       ▼
+                                                               <span class="arch-box">Remote Trail</span>  (./dirdat/rt000001 …)
+                                                                       │
+                                                                       │  read by
+                                                                       ▼
+                                                               <span class="arch-box">REPLICAT Process</span>
+                                                                       │
+                                                                       ▼
+                                                                <span class="arch-box">Target DB</span>
+      </div>
+
+      <h2>The Five Core Processes</h2>
+
+      <h3>1. MANAGER — The Supervisor</h3>
+      <p>Manager is the GoldenGate supervisor daemon. <strong>It must be running before any other process can start.</strong> There is exactly one Manager per GoldenGate installation.</p>
+      <ul>
+        <li>Starts, stops, and monitors all other GoldenGate processes</li>
+        <li>Manages trail file aging (auto-purging old trail files)</li>
+        <li>Listens for incoming connections on TCP port <code>7809</code> (default)</li>
+        <li>Auto-restarts failed processes (if configured with <code>AUTORESTART</code>)</li>
+        <li>Sends threshold alerts when lag is too high</li>
+      </ul>
+
+      <h3>2. EXTRACT — The Capture Engine</h3>
+      <p>Extract reads directly from the database redo logs — <strong>never from the tables themselves</strong>. This is the key to its near-zero performance impact.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Extract Type</th><th>Reads From</th><th>Writes To</th><th>Use When</th></tr></thead>
+          <tbody>
+            <tr><td>Primary (Classic)</td><td>Redo logs directly</td><td>Local trail file</td><td>Standard ongoing capture</td></tr>
+            <tr><td>Integrated</td><td>Oracle Log Mining Server</td><td>Local trail file</td><td>Oracle → Oracle, best performance</td></tr>
+            <tr><td>Data Pump</td><td>Local trail file</td><td>Remote trail file</td><td>Network transport, fan-out</td></tr>
+            <tr><td>Initial Load</td><td>Database (direct read)</td><td>Trail or target directly</td><td>One-time bulk sync before replication starts</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout tip">
+        <div class="callout-icon">✅</div>
+        <div><strong>Always use Integrated Extract for Oracle-to-Oracle</strong> Integrated Extract leverages Oracle's built-in Log Mining Server (LMS), which gives better performance, automatic archive log management, and support for Oracle RAC environments.</div>
+      </div>
+
+      <h3>3. TRAIL FILES — The Message Bus</h3>
+      <p>Trail files are GoldenGate's proprietary binary files that store captured transactions. Think of them as a persistent, ordered message queue between Extract and Replicat.</p>
+      <ul>
+        <li>Named with a 2-character prefix + 6-digit sequence: <code>ex000001</code>, <code>ex000002</code>, …</li>
+        <li>Each file is a fixed maximum size (configured in MB, default 500 MB)</li>
+        <li>Stored under <code>$OGG_HOME/dirdat/</code> by default</li>
+        <li>Read by the <strong>LOGDUMP</strong> utility for debugging</li>
+        <li>Can be encrypted with AES-128 or AES-256</li>
+      </ul>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Trail Type</th><th>Location</th><th>Written By</th><th>Read By</th></tr></thead>
+          <tbody>
+            <tr><td>Local Trail</td><td>Source server</td><td>Primary Extract</td><td>Data Pump Extract</td></tr>
+            <tr><td>Remote Trail</td><td>Target server</td><td>Data Pump via Collector</td><td>Replicat</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>4. DATA PUMP — The Network Bridge</h3>
+      <p>The Data Pump is a secondary Extract process that reads local trail files and sends the data across the network to the target server's trail files. It is <em>optional but strongly recommended for production.</em></p>
+
+      <div class="callout gold">
+        <div class="callout-icon">⭐</div>
+        <div><strong>Why always use a Data Pump in production</strong> If there's no Data Pump and the network goes down, the primary Extract has nowhere to write and will eventually abend. With a Data Pump, the primary Extract keeps writing to local trail files on disk. The Data Pump catches up automatically when the network recovers. Zero data loss.</div>
+      </div>
+
+      <h3>5. REPLICAT — The Delivery Engine</h3>
+      <p>Replicat reads remote trail files and applies the captured transactions to the target database, reconstructing the original DML and DDL operations in transaction order.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Replicat Type</th><th>Parallelism</th><th>Best For</th><th>Oracle Version</th></tr></thead>
+          <tbody>
+            <tr><td>Classic</td><td>Single-threaded</td><td>Heterogeneous targets, small volumes</td><td>All versions</td></tr>
+            <tr><td>Integrated</td><td>Multi-threaded (DB-managed)</td><td>High-volume Oracle-to-Oracle</td><td>Oracle 11.2.0.3+</td></tr>
+            <tr><td>Parallel</td><td>Multi-threaded (OGG-managed)</td><td>High-volume, non-Oracle target</td><td>OGG 12.3+</td></tr>
+            <tr><td>Coordinated</td><td>Thread groups</td><td>Mixed workloads</td><td>OGG 12.1+</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Supplemental Logging</h2>
+      <p>Supplemental logging is a critical Oracle database setting that instructs the database engine to include <strong>extra column data in redo log records</strong>. Without it, GoldenGate cannot reconstruct the full before/after row images needed for replication.</p>
+      <p>By default, Oracle only logs the minimum information needed for database recovery — not enough for GoldenGate. Supplemental logging adds the column values that GoldenGate requires.</p>
+      <ul>
+        <li><strong>Minimal (database-level)</strong> — Required minimum; enables redo to identify changed rows</li>
+        <li><strong>PRIMARY KEY</strong> — Logs PK columns on every UPDATE/DELETE (lower redo overhead)</li>
+        <li><strong>ALL COLUMNS</strong> — Logs every column on every change (highest fidelity, more redo)</li>
+      </ul>
+      <pre><code><span class="cm">-- Verify current supplemental logging status</span>
+<span class="kw">SELECT</span> SUPPLEMENTAL_LOG_DATA_MIN   <span class="kw">AS</span> <span class="st">"MINIMAL"</span>,
+       SUPPLEMENTAL_LOG_DATA_PK    <span class="kw">AS</span> <span class="st">"PK COLS"</span>,
+       SUPPLEMENTAL_LOG_DATA_ALL   <span class="kw">AS</span> <span class="st">"ALL COLS"</span>
+<span class="kw">FROM</span>   V$DATABASE;</code></pre>
+
+      <h2>Classic vs. Microservices Architecture</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Aspect</th><th>Classic Architecture</th><th>Microservices Architecture (MA)</th></tr></thead>
+          <tbody>
+            <tr><td>Management UI</td><td>GGSCI command line only</td><td>Web-based HTML5 Admin Console</td></tr>
+            <tr><td>Process control</td><td>GGSCI commands</td><td>REST API + web UI</td></tr>
+            <tr><td>Data transport</td><td>Data Pump + Collector</td><td>Distribution Service + Receiver Service</td></tr>
+            <tr><td>Monitoring</td><td>INFO/STATS/LAG commands</td><td>Performance Metrics Service (real-time graphs)</td></tr>
+            <tr><td>Security</td><td>OS-level + encrypted wallet</td><td>JWT tokens + SSL/TLS + wallet</td></tr>
+            <tr><td>Best for</td><td>Existing environments, scripted automation</td><td>New deployments, cloud, multi-tenant</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>GoldenGate Directory Structure</h2>
+      <pre><code><span class="path">$OGG_HOME/</span>
+├── <span class="path">dirdat/</span>     <span class="cm">← Trail files (local AND remote)</span>
+├── <span class="path">dirdef/</span>     <span class="cm">← Data definitions files (DEFGEN output)</span>
+├── <span class="path">direrr/</span>     <span class="cm">← Discard files (rows rejected by Replicat)</span>
+├── <span class="path">dirout/</span>     <span class="cm">← Process output files</span>
+├── <span class="path">dirpcs/</span>     <span class="cm">← Process status files (locks)</span>
+├── <span class="path">dirprm/</span>     <span class="cm">← Parameter files (.prm) — YOUR CONFIG FILES LIVE HERE</span>
+├── <span class="path">dirrpt/</span>     <span class="cm">← Process report files (detailed logs)</span>
+├── <span class="path">dirtmp/</span>     <span class="cm">← Temporary files</span>
+├── <span class="nm">ggsci</span>       <span class="cm">← GoldenGate CLI tool</span>
+├── <span class="nm">logdump</span>     <span class="cm">← Trail file inspection utility</span>
+└── <span class="nm">GLOBALS</span>     <span class="cm">← Global parameter file (GoldenGate schema, etc.)</span></code></pre>
+    </section>
+
+    <!-- ══ MODULE 3: INSTALLATION ══ -->
+    <section class="module" id="mod-install">
+      <div class="module-header">
+        <div class="module-tag">Module 03</div>
+        <h1 class="module-title">Installation &amp; Initial Setup</h1>
+        <p class="module-intro">A step-by-step guide to installing Oracle GoldenGate on Linux, configuring the database prerequisites, and getting the Manager process running.</p>
+      </div>
+
+      <h2>Pre-Installation: Database Requirements</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Requirement</th><th>Command to Check</th><th>Expected Value</th></tr></thead>
+          <tbody>
+            <tr><td>ARCHIVELOG mode</td><td><code>SELECT LOG_MODE FROM V$DATABASE;</code></td><td>ARCHIVELOG</td></tr>
+            <tr><td>FORCE LOGGING</td><td><code>SELECT FORCE_LOGGING FROM V$DATABASE;</code></td><td>YES</td></tr>
+            <tr><td>Supplemental logging</td><td><code>SELECT SUPPLEMENTAL_LOG_DATA_MIN FROM V$DATABASE;</code></td><td>YES</td></tr>
+            <tr><td>GGG replication param</td><td><code>SELECT VALUE FROM V$PARAMETER WHERE NAME='enable_goldengate_replication';</code></td><td>TRUE</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Step-by-Step Installation</h2>
+
+      <div class="step-card">
+        <div class="step-card-header">
+          <div class="step-num">1</div>
+          <div class="step-card-title">Enable ARCHIVELOG mode and database prerequisites</div>
+          <div class="step-chevron">▶</div>
+        </div>
+        <div class="step-card-body">
+          <pre><code><span class="cm">-- Connect as SYSDBA</span>
+<span class="kw">SHUTDOWN IMMEDIATE</span>;
+<span class="kw">STARTUP MOUNT</span>;
+<span class="kw">ALTER DATABASE ARCHIVELOG</span>;
+<span class="kw">ALTER DATABASE OPEN</span>;
+<span class="kw">ALTER DATABASE ADD SUPPLEMENTAL LOG DATA</span>;
+<span class="kw">ALTER DATABASE FORCE LOGGING</span>;
+<span class="kw">ALTER SYSTEM SET</span> enable_goldengate_replication <span class="op">=</span> <span class="kw">TRUE</span> <span class="kw">SCOPE</span><span class="op">=</span>BOTH;</code></pre>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-card-header">
+          <div class="step-num">2</div>
+          <div class="step-card-title">Create the GoldenGate database user (both source and target)</div>
+          <div class="step-chevron">▶</div>
+        </div>
+        <div class="step-card-body">
+          <pre><code><span class="kw">CREATE USER</span> ggadmin <span class="kw">IDENTIFIED BY</span> <span class="st">Oracle_4U</span>
+  <span class="kw">DEFAULT TABLESPACE</span> users
+  <span class="kw">TEMPORARY TABLESPACE</span> temp
+  <span class="kw">QUOTA UNLIMITED ON</span> users;
+
+<span class="kw">GRANT</span> CREATE SESSION, ALTER SESSION <span class="kw">TO</span> ggadmin;
+<span class="kw">GRANT</span> SELECT ANY DICTIONARY <span class="kw">TO</span> ggadmin;
+<span class="kw">GRANT</span> SELECT ANY TABLE <span class="kw">TO</span> ggadmin;
+<span class="kw">GRANT</span> FLASHBACK ANY TABLE <span class="kw">TO</span> ggadmin;
+<span class="kw">GRANT</span> EXECUTE ON DBMS_FLASHBACK <span class="kw">TO</span> ggadmin;
+
+<span class="cm">-- For Integrated Extract (recommended):</span>
+<span class="kw">EXEC</span> DBMS_GOLDENGATE_AUTH.GRANT_ADMIN_PRIVILEGE(<span class="st">'GGADMIN'</span>);
+
+<span class="cm">-- For Integrated Replicat (target DB):</span>
+<span class="kw">GRANT DBA TO</span> ggadmin;</code></pre>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-card-header">
+          <div class="step-num">3</div>
+          <div class="step-card-title">Create OS user and GoldenGate home directory</div>
+          <div class="step-chevron">▶</div>
+        </div>
+        <div class="step-card-body">
+          <pre><code><span class="cm"># As root:</span>
+useradd -m -s /bin/bash oracle
+mkdir -p /u01/app/oracle/goldengate/19c
+chown -R oracle:oinstall /u01/app/oracle/goldengate</code></pre>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-card-header">
+          <div class="step-num">4</div>
+          <div class="step-card-title">Extract and install GoldenGate software</div>
+          <div class="step-chevron">▶</div>
+        </div>
+        <div class="step-card-body">
+          <pre><code><span class="cm"># As oracle user — extract the downloaded zip:</span>
+cd /u01/app/oracle/goldengate/19c
+unzip V983788-01.zip
+tar -xzf fbo_ggs_Linux_x64_Oracle_shiphome.tar
+
+<span class="cm"># Run the Oracle Universal Installer:</span>
+cd fbo_ggs_Linux_x64_Oracle_shiphome/Disk1
+./runInstaller
+<span class="cm"># In the GUI:
+# 1. Select "Oracle GoldenGate for Oracle Database 19c"
+# 2. Software Location: /u01/app/oracle/goldengate/19c
+# 3. Manager Port: 7809
+# 4. Click Install</span></code></pre>
+          <div class="callout tip"><div class="callout-icon">✅</div><div><strong>Silent install</strong> For headless servers: <code>./runInstaller -silent -responseFile /tmp/gg_install.rsp</code></div></div>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-card-header">
+          <div class="step-num">5</div>
+          <div class="step-card-title">Set environment variables</div>
+          <div class="step-chevron">▶</div>
+        </div>
+        <div class="step-card-body">
+          <pre><code><span class="cm"># Add to /home/oracle/.bash_profile:</span>
+<span class="kw">export</span> ORACLE_HOME=/u01/app/oracle/product/19c/dbhome_1
+<span class="kw">export</span> ORACLE_SID=ORCL
+<span class="kw">export</span> OGG_HOME=/u01/app/oracle/goldengate/19c
+<span class="kw">export</span> PATH=$OGG_HOME:$ORACLE_HOME/bin:$PATH
+<span class="kw">export</span> LD_LIBRARY_PATH=$ORACLE_HOME/lib:$OGG_HOME:$LD_LIBRARY_PATH
+
+<span class="cm"># Reload:</span>
+source ~/.bash_profile</code></pre>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-card-header">
+          <div class="step-num">6</div>
+          <div class="step-card-title">Create subdirectories and configure Manager</div>
+          <div class="step-chevron">▶</div>
+        </div>
+        <div class="step-card-body">
+          <pre><code><span class="cm"># Start GGSCI and create all required directories:</span>
+cd $OGG_HOME && ./ggsci
+GGSCI&gt; CREATE SUBDIRS</code></pre>
+          <p>Now create the Manager parameter file at <code>$OGG_HOME/dirprm/mgr.prm</code>:</p>
+          <pre><code><span class="cm">-- $OGG_HOME/dirprm/mgr.prm</span>
+PORT 7809
+DYNAMICPORTLIST 7840-7920
+AUTORESTART EXTRACT *, WAITMINUTES 2, RESETMINUTES 5
+AUTORESTART REPLICAT *, WAITMINUTES 2, RESETMINUTES 5
+PURGEOLDEXTRACTS ./dirdat/*, USECHECKPOINTS, MINKEEPDAYS 3
+LAGREPORTHOURS 1
+LAGINFOMINUTES 30
+LAGCRITICALMINUTES 45</code></pre>
+          <pre><code><span class="cm"># Start Manager:</span>
+GGSCI&gt; START MANAGER
+GGSCI&gt; INFO MANAGER
+<span class="cm"># Expected: Manager is running (IP port 7809).</span></code></pre>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-card-header">
+          <div class="step-num">7</div>
+          <div class="step-card-title">Create checkpoint table (target server only)</div>
+          <div class="step-chevron">▶</div>
+        </div>
+        <div class="step-card-body">
+          <pre><code><span class="cm"># On TARGET server in GGSCI:</span>
+GGSCI&gt; DBLOGIN USERID ggadmin PASSWORD Oracle_4U
+GGSCI&gt; ADD CHECKPOINTTABLE ggadmin.chkpt
+<span class="cm"># Expected: Successfully created checkpoint table ggadmin.chkpt</span></code></pre>
+          <div class="callout note"><div class="callout-icon">📌</div><div><strong>What is the checkpoint table?</strong> It records where Replicat has read up to in the trail files. If Replicat restarts, it reads this table to resume from the exact right position — preventing duplicate or missed transactions.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ MODULE 4: UNIDIRECTIONAL ══ -->
+    <section class="module" id="mod-unidirectional">
+      <div class="module-header">
+        <div class="module-tag">Module 04</div>
+        <h1 class="module-title">Configuring Unidirectional Replication</h1>
+        <p class="module-intro">Your first end-to-end GoldenGate setup. We'll replicate the HR schema from a source Oracle database to a target Oracle database — step by step, no steps skipped.</p>
+      </div>
+
+      <div class="lab-card">
+        <div class="lab-card-tag">Lab Environment</div>
+        <h3>Lab 1 Setup</h3>
+        <div class="lab-meta">
+          <div class="lab-meta-item">🖥️ Source: <span>sourceserver (SRCDB)</span></div>
+          <div class="lab-meta-item">🖥️ Target: <span>targetserver (TGTDB)</span></div>
+          <div class="lab-meta-item">📁 Schema: <span>HR (employees, departments, jobs)</span></div>
+          <div class="lab-meta-item">🔌 Port: <span>7809 (both servers)</span></div>
+        </div>
+        <div class="lab-objectives">
+          <ul>
+            <li>Configure Extract to capture changes from SRCDB</li>
+            <li>Configure Replicat to apply changes to TGTDB</li>
+            <li>Test with live DML and verify replication within 5 seconds</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2>Source-Side: Enable Supplemental Logging</h2>
+      <pre><code><span class="cm">-- On source DB (SRCDB) as SYSDBA:</span>
+<span class="kw">ALTER DATABASE ADD SUPPLEMENTAL LOG DATA</span>;
+
+<span class="cm">-- Enable for each table (use GGSCI ADD TRANDATA — easier):</span>
+GGSCI&gt; DBLOGIN USERID ggadmin PASSWORD Oracle_4U
+GGSCI&gt; ADD TRANDATA hr.employees
+GGSCI&gt; ADD TRANDATA hr.departments
+GGSCI&gt; ADD TRANDATA hr.jobs
+
+<span class="cm">-- Verify:</span>
+GGSCI&gt; INFO TRANDATA hr.employees
+<span class="cm">-- Expected: Logging of supplemental redo log data is enabled for table HR.EMPLOYEES.</span></code></pre>
+
+      <h2>Source-Side: Create Extract Parameter File</h2>
+      <p>Create the file <code>$OGG_HOME/dirprm/exthr.prm</code> on the <strong>source server</strong>:</p>
+      <pre><code><span class="cm">-- $OGG_HOME/dirprm/exthr.prm (SOURCE SERVER)</span>
+EXTRACT exthr
+USERID ggadmin, PASSWORD Oracle_4U
+EXTTRAIL ./dirdat/ex
+DISCARDFILE ./direrr/exthr.dsc, APPEND, MEGABYTES 100
+REPORTCOUNT EVERY 30 MINUTES, RATE
+
+<span class="cm">-- Tables to capture:</span>
+TABLE hr.employees;
+TABLE hr.departments;
+TABLE hr.jobs;</code></pre>
+
+      <h2>Source-Side: Register and Start Extract</h2>
+      <pre><code>GGSCI&gt; DBLOGIN USERID ggadmin PASSWORD Oracle_4U
+
+<span class="cm">-- Register Extract (BEGIN NOW = start capturing from this moment forward):</span>
+GGSCI&gt; ADD EXTRACT exthr, INTEGRATED TRANLOG, BEGIN NOW
+GGSCI&gt; REGISTER EXTRACT exthr DATABASE
+
+<span class="cm">-- Add the local trail file:</span>
+GGSCI&gt; ADD EXTTRAIL ./dirdat/ex, EXTRACT exthr, MEGABYTES 200
+
+GGSCI&gt; START EXTRACT exthr
+
+<span class="cm">-- Verify it's running:</span>
+GGSCI&gt; INFO EXTRACT exthr, DETAIL</code></pre>
+
+      <h2>Target-Side: Create Replicat Parameter File</h2>
+      <p>Create <code>$OGG_HOME/dirprm/rephr.prm</code> on the <strong>target server</strong>:</p>
+      <pre><code><span class="cm">-- $OGG_HOME/dirprm/rephr.prm (TARGET SERVER)</span>
+REPLICAT rephr
+USERID ggadmin, PASSWORD Oracle_4U
+ASSUMETARGETDEFS
+DISCARDFILE ./direrr/rephr.dsc, APPEND, MEGABYTES 100
+REPORTCOUNT EVERY 30 MINUTES, RATE
+
+<span class="cm">-- Error handling:</span>
+REPERROR (DEFAULT, ABEND)
+REPERROR (1403, DISCARD)   <span class="cm">-- ORA-01403: row not found on DELETE = ignore</span>
+
+<span class="cm">-- Table mappings:</span>
+MAP hr.employees,  TARGET hr.employees;
+MAP hr.departments, TARGET hr.departments;
+MAP hr.jobs,       TARGET hr.jobs;</code></pre>
+
+      <div class="callout note">
+        <div class="callout-icon">📌</div>
+        <div><strong>ASSUMETARGETDEFS</strong> tells Replicat that source and target tables have identical column definitions. If your structures differ, use <code>SOURCEDEFS ./dirdef/src.def</code> instead (generated by DEFGEN utility on the source).</div>
+      </div>
+
+      <h2>Target-Side: Add and Start Replicat</h2>
+      <pre><code>GGSCI&gt; DBLOGIN USERID ggadmin PASSWORD Oracle_4U
+
+<span class="cm">-- Add Replicat pointing at the remote trail:</span>
+GGSCI&gt; ADD REPLICAT rephr, INTEGRATED, EXTTRAIL ./dirdat/rt, CHECKPOINTTABLE ggadmin.chkpt
+
+GGSCI&gt; START REPLICAT rephr
+
+<span class="cm">-- Verify:</span>
+GGSCI&gt; INFO REPLICAT rephr, DETAIL
+GGSCI&gt; INFO ALL</code></pre>
+
+      <h2>Testing the Replication</h2>
+      <pre><code><span class="cm">-- On SOURCE database — insert a test row:</span>
+<span class="kw">INSERT INTO</span> hr.employees (employee_id, first_name, last_name, email, hire_date, job_id)
+<span class="kw">VALUES</span> (<span class="nm">999</span>, <span class="st">'Test'</span>, <span class="st">'User'</span>, <span class="st">'TESTUSER'</span>, SYSDATE, <span class="st">'AD_PRES'</span>);
+<span class="kw">COMMIT</span>;
+
+<span class="cm">-- Wait ~3-5 seconds, then on TARGET database:</span>
+<span class="kw">SELECT</span> employee_id, first_name, last_name
+<span class="kw">FROM</span>  hr.employees
+<span class="kw">WHERE</span> employee_id <span class="op">=</span> <span class="nm">999</span>;
+<span class="cm">-- Should return 1 row immediately</span></code></pre>
+      <pre><code><span class="cm">-- Monitor statistics (run on either server):</span>
+GGSCI&gt; STATS EXTRACT exthr, TOTAL
+GGSCI&gt; STATS REPLICAT rephr, TOTAL
+GGSCI&gt; LAG EXTRACT exthr
+GGSCI&gt; LAG REPLICAT rephr</code></pre>
+
+      <div class="callout tip">
+        <div class="callout-icon">✅</div>
+        <div><strong>What good lag looks like</strong> Under normal load: Extract lag 0-2 seconds, Replicat lag 2-5 seconds. Total end-to-end latency under 10 seconds is excellent.</div>
+      </div>
+    </section>
+
+    <!-- ══ MODULE 5: DATA PUMP ══ -->
+    <section class="module" id="mod-datapump">
+      <div class="module-header">
+        <div class="module-tag">Module 05</div>
+        <h1 class="module-title">Adding a Data Pump (Production Best Practice)</h1>
+        <p class="module-intro">In Module 4 we sent data directly from Extract to the remote trail. In production, always add a Data Pump between them. Here's why — and how.</p>
+      </div>
+
+      <h2>Why You Need a Data Pump in Production</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Scenario</th><th>Without Data Pump</th><th>With Data Pump</th></tr></thead>
+          <tbody>
+            <tr><td>Network outage (1 hour)</td><td>Extract fills its buffer and ABENDs. Data loss possible.</td><td>Extract writes to local disk. Data Pump queues. No data loss.</td></tr>
+            <tr><td>Fan-out to 3 targets</td><td>Not possible from primary Extract</td><td>One Data Pump per target — each can filter/transform differently</td></tr>
+            <tr><td>Target server maintenance</td><td>Must stop Extract (gaps data)</td><td>Stop Data Pump only; Extract keeps capturing</td></tr>
+            <tr><td>Network encryption</td><td>Plain-text trail data on the wire</td><td>Data Pump encrypts trail before sending</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Architecture with Data Pump</h2>
+      <div class="arch-diagram">
+SOURCE SERVER:
+  <span class="arch-box">PRIMARY EXTRACT (exthr)</span>
+         │  writes to
+         ▼
+  <span class="arch-box">Local Trail  ./dirdat/ex</span>
+         │  read by
+         ▼
+  <span class="arch-box">DATA PUMP (pmphr)</span>  ──── TCP/IP ────▶  <span class="arch-box">COLLECTOR</span>  (target, dynamic)
+                                                    │  writes to
+                                                    ▼
+                                          <span class="arch-box">Remote Trail  ./dirdat/rt</span>
+                                                    │  read by
+                                                    ▼
+                                          <span class="arch-box">REPLICAT (rephr)</span>
+      </div>
+
+      <h2>Step 1 — Reconfigure Extract to Write Local Trail</h2>
+      <p>Modify <code>exthr.prm</code> to use <code>EXTTRAIL</code> (local) instead of <code>RMTTRAIL</code> (remote):</p>
+      <pre><code><span class="cm">-- $OGG_HOME/dirprm/exthr.prm — UPDATED</span>
+EXTRACT exthr
+USERID ggadmin, PASSWORD Oracle_4U
+EXTTRAIL ./dirdat/ex          <span class="cm">← LOCAL trail now</span>
+DISCARDFILE ./direrr/exthr.dsc, APPEND, MEGABYTES 100
+
+TABLE hr.employees;
+TABLE hr.departments;
+TABLE hr.jobs;</code></pre>
+
+      <h2>Step 2 — Create Data Pump Parameter File</h2>
+      <pre><code><span class="cm">-- $OGG_HOME/dirprm/pmphr.prm (SOURCE SERVER)</span>
+EXTRACT pmphr
+PASSTHRU                                  <span class="cm">← No processing, just forward</span>
+RMTHOST targetserver.example.com, MGRPORT 7809
+RMTTRAIL ./dirdat/rt
+DISCARDFILE ./direrr/pmphr.dsc, APPEND, MEGABYTES 100
+
+TABLE hr.*;</code></pre>
+
+      <h2>Step 3 — Add and Start Data Pump</h2>
+      <pre><code><span class="cm">-- Stop Extract, update trail, restart:</span>
+GGSCI&gt; STOP EXTRACT exthr
+GGSCI&gt; DELETE RMTTRAIL ./dirdat/rt
+GGSCI&gt; ADD EXTTRAIL ./dirdat/ex, EXTRACT exthr, MEGABYTES 200
+GGSCI&gt; START EXTRACT exthr
+
+<span class="cm">-- Add Data Pump (reads from local trail):</span>
+GGSCI&gt; ADD EXTRACT pmphr, EXTTRAILSOURCE ./dirdat/ex
+GGSCI&gt; ADD RMTTRAIL ./dirdat/rt, EXTRACT pmphr, MEGABYTES 200
+GGSCI&gt; START EXTRACT pmphr
+
+<span class="cm">-- Check everything is running:</span>
+GGSCI&gt; INFO ALL</code></pre>
+      <div class="callout note">
+        <div class="callout-icon">📌</div>
+        <div><strong>PASSTHRU</strong> means the Data Pump forwards data unchanged. If you need to apply filtering or transformations at the pump level (e.g., different rules per target), replace <code>PASSTHRU</code> with TABLE and MAP statements.</div>
+      </div>
+    </section>
+
+    <!-- ══ MODULE 6: INITIAL LOAD ══ -->
+    <section class="module" id="mod-initialload">
+      <div class="module-header">
+        <div class="module-tag">Module 06</div>
+        <h1 class="module-title">Initial Data Load (Instantiation)</h1>
+        <p class="module-intro">Before ongoing replication can start, the target database must be populated with a consistent snapshot of the source. This is called the "initial load" or "instantiation" — and how you do it determines whether you have data gaps or duplicates.</p>
+      </div>
+
+      <h2>The SCN-Based Approach (Zero Downtime)</h2>
+      <p>The key insight: use Oracle's <strong>System Change Number (SCN)</strong> to coordinate the snapshot and the start of ongoing replication. GoldenGate will queue all changes from the snapshot SCN while you import the data — ensuring zero gaps and zero duplicates.</p>
+      <div class="arch-diagram">
+Timeline:
+  T1: Record current SCN = <span class="nm">4892031</span>
+  T2: Take EXPDP snapshot at SCN 4892031  (source stays fully online)
+  T3: Extract starts queueing changes AFTER SCN 4892031
+  T4: Import snapshot to target (may take minutes/hours)
+  T5: Start Replicat — applies all queued changes since 4892031
+  T6: Lag reaches near-zero — replication is live!
+
+<span class="arch-label">No downtime. No gaps. No duplicates.</span>
+      </div>
+
+      <h2>Step 1 — Get the Snapshot SCN</h2>
+      <pre><code><span class="cm">-- On SOURCE database:</span>
+<span class="kw">SELECT</span> CURRENT_SCN <span class="kw">FROM</span> V$DATABASE;
+<span class="cm">-- Example output: 4892031   ← Write this down!</span></code></pre>
+
+      <h2>Step 2 — Register Extract at That SCN (Don't Start It Yet)</h2>
+      <pre><code>GGSCI&gt; DBLOGIN USERID ggadmin PASSWORD Oracle_4U
+
+<span class="cm">-- Register at the snapshot SCN:</span>
+GGSCI&gt; ADD EXTRACT exthr, INTEGRATED TRANLOG, SCN 4892031
+GGSCI&gt; REGISTER EXTRACT exthr DATABASE
+GGSCI&gt; ADD EXTTRAIL ./dirdat/ex, EXTRACT exthr, MEGABYTES 200
+
+<span class="cm">-- DO NOT start Extract yet!</span></code></pre>
+
+      <h2>Step 3 — Export Source Data at That SCN</h2>
+      <pre><code>expdp ggadmin/Oracle_4U \
+  SCHEMAS=hr \
+  DIRECTORY=DATA_PUMP_DIR \
+  DUMPFILE=hr_initial.dmp \
+  LOGFILE=hr_export.log \
+  FLASHBACK_SCN=4892031</code></pre>
+
+      <h2>Step 4 — Import to Target Database</h2>
+      <pre><code>impdp ggadmin/Oracle_4U \
+  SCHEMAS=hr \
+  DIRECTORY=DATA_PUMP_DIR \
+  DUMPFILE=hr_initial.dmp \
+  LOGFILE=hr_import.log \
+  REMAP_SCHEMA=hr:hr \
+  TABLE_EXISTS_ACTION=REPLACE</code></pre>
+
+      <h2>Step 5 — Start Extract, Data Pump, and Replicat</h2>
+      <pre><code><span class="cm">-- Source: start Extract (it queued changes since SCN 4892031):</span>
+GGSCI&gt; START EXTRACT exthr
+GGSCI&gt; START EXTRACT pmphr
+
+<span class="cm">-- Target: start Replicat:</span>
+GGSCI&gt; START REPLICAT rephr
+
+<span class="cm">-- Monitor lag — watch it drop toward zero:</span>
+GGSCI&gt; LAG REPLICAT rephr</code></pre>
+
+      <div class="callout warn">
+        <div class="callout-icon">⚠️</div>
+        <div><strong>HANDLECOLLISIONS during sync</strong> While Replicat is catching up, you may get duplicate-key errors if some rows from the import overlap with rows in the trail. Add <code>HANDLECOLLISIONS</code> to rephr.prm temporarily. Remove it once lag is near-zero and verify a clean run.</div>
+      </div>
+
+      <h2>Initial Load Methods Comparison</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Method</th><th>Best For</th><th>Downtime</th><th>Complexity</th></tr></thead>
+          <tbody>
+            <tr><td>EXPDP/IMPDP + SCN (above)</td><td>Oracle-to-Oracle, large schemas</td><td>Zero</td><td>Medium</td></tr>
+            <tr><td>GoldenGate Direct Load</td><td>Small tables, heterogeneous targets</td><td>Zero</td><td>Low</td></tr>
+            <tr><td>RMAN restore</td><td>Very large databases (&gt;1 TB)</td><td>Minimal</td><td>Medium</td></tr>
+            <tr><td>File-based bulk load</td><td>Non-Oracle targets</td><td>Varies</td><td>High</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ══ MODULE 7: DDL ══ -->
+    <section class="module" id="mod-ddl">
+      <div class="module-header">
+        <div class="module-tag">Module 07</div>
+        <h1 class="module-title">DDL Replication</h1>
+        <p class="module-intro">By default, GoldenGate only replicates DML (INSERT, UPDATE, DELETE). DDL replication adds support for schema changes like CREATE TABLE, ALTER TABLE, and DROP TABLE.</p>
+      </div>
+
+      <div class="callout note">
+        <div class="callout-icon">📌</div>
+        <div><strong>When you need DDL replication</strong> In long-running replication environments, application deployments add new columns, create new tables, or modify indexes. Without DDL replication, these schema changes must be manually applied to the target — which is error-prone and causes replication to break.</div>
+      </div>
+
+      <h2>Install DDL Support Objects (Oracle Source)</h2>
+      <pre><code><span class="cm"># Run as SYSDBA on source database:</span>
+cd $OGG_HOME
+sqlplus / as sysdba
+
+SQL&gt; @marker_setup.sql
+SQL&gt; @ddl_setup.sql
+SQL&gt; @role_setup.sql
+SQL&gt; GRANT GGS_GGSUSER_ROLE TO ggadmin;
+SQL&gt; @ddl_enable.sql
+SQL&gt; @ddl_pin.sql</code></pre>
+
+      <h2>Configure DDL in Extract (exthr.prm)</h2>
+      <pre><code>EXTRACT exthr
+USERID ggadmin, PASSWORD Oracle_4U
+EXTTRAIL ./dirdat/ex
+
+<span class="cm">-- DDL capture (only for mapped objects — safest):</span>
+DDL INCLUDE MAPPED
+DDLOPTIONS REPORT             <span class="cm">← Log all DDL to report file</span>
+
+TABLE hr.employees;
+TABLE hr.departments;</code></pre>
+
+      <h2>Configure DDL in Replicat (rephr.prm)</h2>
+      <pre><code>REPLICAT rephr
+USERID ggadmin, PASSWORD Oracle_4U
+ASSUMETARGETDEFS
+
+DDL INCLUDE MAPPED
+DDLERROR DEFAULT ABEND RETRYOP MAXRETRIES 3 RETRYDELAY 5
+
+MAP hr.employees,  TARGET hr.employees;
+MAP hr.departments, TARGET hr.departments;</code></pre>
+
+      <h2>DDL Include Options Reference</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Option</th><th>What It Replicates</th><th>Recommended</th></tr></thead>
+          <tbody>
+            <tr><td><code>DDL INCLUDE MAPPED</code></td><td>Only DDL for tables in TABLE/MAP statements</td><td>✅ Yes — safest</td></tr>
+            <tr><td><code>DDL INCLUDE ALL</code></td><td>All DDL in the database</td><td>⚠️ Risky — includes system DDL</td></tr>
+            <tr><td><code>DDL INCLUDE UNMAPPED</code></td><td>DDL for objects NOT in TABLE/MAP</td><td>❌ Rarely needed</td></tr>
+            <tr><td><code>DDL EXCLUDE</code></td><td>Exclude DDL entirely</td><td>Default if no DDL clause present</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ══ MODULE 8: TRANSFORM ══ -->
+    <section class="module" id="mod-transform">
+      <div class="module-header">
+        <div class="module-tag">Module 08</div>
+        <h1 class="module-title">Data Filtering &amp; Transformation</h1>
+        <p class="module-intro">GoldenGate can filter rows, remap columns, rename tables, and transform values as data flows through the pipeline. These can be applied in Extract, Data Pump, or Replicat.</p>
+      </div>
+
+      <h2>Row Filtering with WHERE</h2>
+      <pre><code><span class="cm">-- Replicate only employees in departments 10, 20, or 30:</span>
+MAP hr.employees, TARGET hr.employees
+  WHERE (department_id IN (<span class="nm">10</span>, <span class="nm">20</span>, <span class="nm">30</span>));
+
+<span class="cm">-- Filter in Extract (better: reduces trail file size):</span>
+TABLE hr.employees, WHERE (department_id IN (<span class="nm">10</span>, <span class="nm">20</span>, <span class="nm">30</span>));
+
+<span class="cm">-- Exclude cancelled orders:</span>
+TABLE hr.orders, WHERE (status <span class="op">&lt;&gt;</span> <span class="st">'CANCELLED'</span>);</code></pre>
+
+      <h2>Column Mapping &amp; Renaming</h2>
+      <pre><code><span class="cm">-- Map source columns to differently-named target columns:</span>
+MAP hr.employees, TARGET dw.dim_employees
+  COLMAP (emp_id    = employee_id,
+          full_name = UPPER(last_name) || <span class="st">', '</span> || first_name,
+          dept_id   = department_id,
+          load_ts   = @DATENOW());       <span class="cm">← Adds a timestamp column</span>
+
+<span class="cm">-- Computed column transformations:</span>
+MAP hr.orders, TARGET dw.fact_orders
+  COLMAP (order_id   = order_id,
+          amount_usd = @COMPUTE(order_amount * exchange_rate),
+          order_dt   = @DATE(<span class="st">'YYYY-MM-DD'</span>, <span class="st">'DD-MON-YYYY'</span>, order_date),
+          status_lbl = @IF(status=<span class="st">'A'</span>,<span class="st">'Active'</span>,<span class="st">'Inactive'</span>));</code></pre>
+
+      <h2>Built-in Conversion Functions</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Function</th><th>Purpose</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td><code>@COMPUTE</code></td><td>Arithmetic operations</td><td><code>@COMPUTE(price * qty)</code></td></tr>
+            <tr><td><code>@DATE</code></td><td>Date format conversion</td><td><code>@DATE('YYYY-MM-DD','DD-MON-YY',dt)</code></td></tr>
+            <tr><td><code>@DATENOW</code></td><td>Current timestamp</td><td><code>@DATENOW()</code></td></tr>
+            <tr><td><code>@UPPER / @LOWER</code></td><td>String case</td><td><code>@UPPER(last_name)</code></td></tr>
+            <tr><td><code>@SUBSTR</code></td><td>Substring extraction</td><td><code>@SUBSTR(name,1,20)</code></td></tr>
+            <tr><td><code>@IF</code></td><td>Conditional value</td><td><code>@IF(status='A','Active','Inactive')</code></td></tr>
+            <tr><td><code>@STRNUM</code></td><td>String → number</td><td><code>@STRNUM(str_col)</code></td></tr>
+            <tr><td><code>@NUMSTR</code></td><td>Number → string</td><td><code>@NUMSTR(emp_id)</code></td></tr>
+            <tr><td><code>@GETENV</code></td><td>Get env/header variable</td><td><code>@GETENV('SYSTEM','HOSTNAME')</code></td></tr>
+            <tr><td><code>@NULL</code></td><td>Return NULL</td><td><code>@NULL</code></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Token-Based Data Enrichment</h2>
+      <p>Tokens let you pass metadata alongside the trail record — perfect for audit tables.</p>
+      <pre><code><span class="cm">-- In Extract: define tokens on each captured row:</span>
+TABLE hr.employees,
+  TOKENS (TK-HOST    = @GETENV(<span class="st">'SYSTEM'</span>, <span class="st">'HOSTNAME'</span>),
+          TK-TIME    = @DATENOW(),
+          TK-OPTYPE  = @GETENV(<span class="st">'GGHEADER'</span>,<span class="st">'OPTYPE'</span>));
+
+<span class="cm">-- In Replicat: use token values in the target mapping:</span>
+MAP hr.employees, TARGET hr.emp_audit
+  COLMAP (employee_id = employee_id,
+          last_name   = last_name,
+          src_host    = @TOKEN(<span class="st">'TK-HOST'</span>),
+          change_time = @TOKEN(<span class="st">'TK-TIME'</span>),
+          op_type     = @TOKEN(<span class="st">'TK-OPTYPE'</span>));</code></pre>
+    </section>
+
+    <!-- ══ MODULE 9: MONITORING ══ -->
+    <section class="module" id="mod-monitor">
+      <div class="module-header">
+        <div class="module-tag">Module 09</div>
+        <h1 class="module-title">Monitoring &amp; Administration</h1>
+        <p class="module-intro">Day-to-day GoldenGate administration revolves around a handful of GGSCI commands. Master these and you can manage any GoldenGate environment.</p>
+      </div>
+
+      <h2>Essential GGSCI Commands</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Category</th><th>Command</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td>Status</td><td><code>INFO ALL</code></td><td>Show all process statuses at once — your daily dashboard</td></tr>
+            <tr><td>Status</td><td><code>INFO EXTRACT exthr, DETAIL</code></td><td>Detailed info: lag, SCN position, trail file, registered tables</td></tr>
+            <tr><td>Status</td><td><code>INFO REPLICAT rephr, DETAIL</code></td><td>Detailed info: lag, checkpoint position, trail file, mapped tables</td></tr>
+            <tr><td>Statistics</td><td><code>STATS EXTRACT exthr, TOTAL</code></td><td>Cumulative insert/update/delete counts since start</td></tr>
+            <tr><td>Statistics</td><td><code>STATS REPLICAT rephr, TABLE hr.*</code></td><td>Stats broken down per table</td></tr>
+            <tr><td>Lag</td><td><code>LAG EXTRACT exthr</code></td><td>Current capture lag in HH:MM:SS</td></tr>
+            <tr><td>Lag</td><td><code>LAG REPLICAT rephr</code></td><td>Current apply lag in HH:MM:SS</td></tr>
+            <tr><td>Control</td><td><code>START EXTRACT exthr</code></td><td>Start an Extract process</td></tr>
+            <tr><td>Control</td><td><code>STOP REPLICAT rephr</code></td><td>Gracefully stop (finishes current transaction)</td></tr>
+            <tr><td>Control</td><td><code>KILL EXTRACT exthr</code></td><td>Force-kill immediately (use only when STOP hangs)</td></tr>
+            <tr><td>Logs</td><td><code>VIEW REPORT exthr</code></td><td>View the process report file — first place to look for errors</td></tr>
+            <tr><td>Logs</td><td><code>VIEW GGSEVT</code></td><td>GoldenGate event log (startup/shutdown/errors across all processes)</td></tr>
+            <tr><td>Trail</td><td><code>INFO EXTTRAIL ./dirdat/ex</code></td><td>Trail file name, size, write position, age</td></tr>
+            <tr><td>Purge</td><td><code>PURGE EXTTRAIL ./dirdat/ex, USECHECKPOINTS</code></td><td>Remove trail files safely (keeps any still needed by Replicat)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Lag: What It Means and What's Normal</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Lag Range</th><th>Assessment</th><th>Action</th></tr></thead>
+          <tbody>
+            <tr><td>0 – 5 seconds</td><td>✅ Excellent</td><td>None needed</td></tr>
+            <tr><td>5 – 30 seconds</td><td>✅ Normal</td><td>Monitor; normal under moderate load</td></tr>
+            <tr><td>30 sec – 5 min</td><td>⚠️ Investigate</td><td>Check I/O, network bandwidth, DB waits</td></tr>
+            <tr><td>&gt; 5 minutes</td><td>🔴 Critical</td><td>Immediate action — check for long transactions, disk full, network issues</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Process State Machine</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>State</th><th>Meaning</th><th>Action</th></tr></thead>
+          <tbody>
+            <tr><td><code>RUNNING</code></td><td>Healthy, processing data</td><td>None</td></tr>
+            <tr><td><code>STOPPED</code></td><td>Gracefully stopped</td><td>Review; start if needed</td></tr>
+            <tr><td><code>ABENDED</code></td><td>Stopped due to an error</td><td>Run <code>VIEW REPORT</code> immediately</td></tr>
+            <tr><td><code>STARTING</code></td><td>Initializing</td><td>Wait 30 seconds; check if stuck</td></tr>
+            <tr><td><code>RECOVERING</code></td><td>Restarting from checkpoint</td><td>Wait; normal after system restart</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Handling ABEND Errors</h2>
+      <pre><code><span class="cm">-- Step 1: Find out why it ABENDed:</span>
+GGSCI&gt; VIEW REPORT rephr
+<span class="cm">-- Scroll to the bottom — the error is at the end</span>
+
+<span class="cm">-- Step 2: Options to resolve:</span>
+
+<span class="cm">-- Option A: Skip the bad transaction (use carefully!):</span>
+GGSCI&gt; START REPLICAT rephr, SKIPTRANSACTION
+
+<span class="cm">-- Option B: Skip to a specific SCN (known-good position):</span>
+GGSCI&gt; START REPLICAT rephr, AFTERCSN 4892099
+
+<span class="cm">-- Option C: Handle collisions (for initial load sync issues):</span>
+<span class="cm">-- Add to rephr.prm: HANDLECOLLISIONS</span>
+<span class="cm">-- Then restart normally. Remove once replication is stable.</span>
+
+<span class="cm">-- Option D: Fix the data issue, then restart:</span>
+GGSCI&gt; START REPLICAT rephr</code></pre>
+
+      <div class="callout warn">
+        <div class="callout-icon">⚠️</div>
+        <div><strong>SKIPTRANSACTION is a last resort</strong> It discards the entire transaction. Always try to understand and fix the root cause first. Log skipped transactions to a discard file for review: add <code>DISCARDFILE ./direrr/rephr.dsc, APPEND</code> to the parameter file.</div>
+      </div>
+    </section>
+
+    <!-- ══ MODULE 10: BIDIRECTIONAL ══ -->
+    <section class="module" id="mod-bidir">
+      <div class="module-header">
+        <div class="module-tag">Module 10</div>
+        <h1 class="module-title">Bidirectional (Active-Active) Replication</h1>
+        <p class="module-intro">In bidirectional replication, both databases accept writes simultaneously and changes flow in both directions. It's the most powerful — and most complex — GoldenGate configuration.</p>
+      </div>
+
+      <div class="arch-diagram">
+DATABASE A (Primary DC)                   DATABASE B (Secondary DC)
+  <span class="arch-box">Extract A (extA)</span>  ─────────────────────▶  <span class="arch-box">Replicat B (repB)</span>
+  <span class="arch-box">Replicat A (repA)</span> ◀─────────────────────  <span class="arch-box">Extract B (extB)</span>
+
+Both databases: READ + WRITE (active-active)
+Loop prevention: <span class="arch-label">CRITICAL — without it, changes loop infinitely</span>
+      </div>
+
+      <h2>Loop Prevention (Critical)</h2>
+      <p>Without loop prevention, a change made on Database A gets replicated to B, then B's Extract captures it and sends it back to A, which sends it to B again — an infinite loop. GoldenGate prevents this using <strong>transaction tags</strong>.</p>
+      <pre><code><span class="cm">-- On Database A's Extract (extA.prm):</span>
+EXTRACT extA
+TRANLOGOPTIONS EXCLUDETAG 00    <span class="cm">← Exclude changes tagged with '00' (Replicat's tag)</span>
+EXTTRAIL ./dirdat/ea
+TABLE hr.*;
+
+<span class="cm">-- Replicat automatically stamps its applied changes with tag 00.</span>
+<span class="cm">-- Extract sees that tag and skips those records — loop broken!</span></code></pre>
+
+      <div class="callout tip">
+        <div class="callout-icon">✅</div>
+        <div><strong>How it works</strong> When Replicat applies a transaction, Oracle writes a special marker (tag 00) in the redo log. The Extract on that same database reads the redo log and skips anything tagged 00 — because that came from the other database, not from a local application write.</div>
+      </div>
+
+      <h2>Conflict Detection &amp; Resolution (CDR)</h2>
+      <p>When the same row is modified on both databases at the same time, you have a conflict. GoldenGate's CDR policies handle this automatically.</p>
+      <pre><code><span class="cm">-- In repA.prm (Database A's Replicat):</span>
+MAP hr.employees, TARGET hr.employees,
+  RESOLVECONFLICT (UPDATEROWEXISTS,
+    (DEFAULT, USEMAX (last_updated)));    <span class="cm">← Most-recent timestamp wins</span>
+
+<span class="cm">-- Ignore delete conflicts (row already gone):</span>
+MAP hr.orders, TARGET hr.orders,
+  RESOLVECONFLICT (DELETEROWEXISTS, (DEFAULT, DISCARD));
+
+<span class="cm">-- Use numeric delta for counters (add the difference, not overwrite):</span>
+MAP hr.inventory, TARGET hr.inventory,
+  RESOLVECONFLICT (UPDATEROWEXISTS,
+    (DEFAULT, USEDELTA (quantity_on_hand)));</code></pre>
+
+      <h2>CDR Resolution Strategies</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Strategy</th><th>Description</th><th>Best For</th></tr></thead>
+          <tbody>
+            <tr><td><code>USEMAX</code></td><td>Keep the larger value of the conflicting column</td><td>Version numbers, timestamps (most-recent-wins)</td></tr>
+            <tr><td><code>USEMIN</code></td><td>Keep the smaller value</td><td>Priority queues, minimum bids</td></tr>
+            <tr><td><code>USEDELTA</code></td><td>Apply the numeric delta (difference) from source</td><td>Account balances, inventory counts</td></tr>
+            <tr><td><code>USELARGEST</code></td><td>Keep the entire row from whichever side had the larger specified column value</td><td>Most-recent-row-wins scenarios</td></tr>
+            <tr><td><code>OVERWRITE</code></td><td>Source always overwrites target</td><td>HA failover where one side is master</td></tr>
+            <tr><td><code>DISCARD</code></td><td>Ignore the conflict, keep target value</td><td>Delete-row-not-found conflicts</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ══ MODULE 11: MICROSERVICES ══ -->
+    <section class="module" id="mod-ma">
+      <div class="module-header">
+        <div class="module-tag">Module 11</div>
+        <h1 class="module-title">GoldenGate Microservices Architecture</h1>
+        <p class="module-intro">Introduced in GoldenGate 12.3, the Microservices Architecture (MA) is the modern, REST API-driven deployment model. It's the recommended approach for all new deployments.</p>
+      </div>
+
+      <h2>MA Services Overview</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Service</th><th>Default Port</th><th>Classic Equivalent</th><th>Role</th></tr></thead>
+          <tbody>
+            <tr><td>Service Manager</td><td>9100</td><td>Manager (mgr)</td><td>Entry point; manages all other services per deployment</td></tr>
+            <tr><td>Administration Service</td><td>9101+</td><td>GGSCI + parameter files</td><td>Create/start/stop Extract &amp; Replicat via REST API or web UI</td></tr>
+            <tr><td>Distribution Service</td><td>9102+</td><td>Data Pump Extract</td><td>Routes trail data from source to target via HTTP/HTTPS paths</td></tr>
+            <tr><td>Receiver Service</td><td>9103+</td><td>Collector process</td><td>Receives incoming trail data; writes to remote trail files</td></tr>
+            <tr><td>Performance Metrics Service</td><td>9104+</td><td>STATS / LAG commands</td><td>Real-time monitoring via web dashboard and REST API</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Creating a Deployment</h2>
+      <pre><code><span class="cm"># Interactive GUI creator:</span>
+$OGG_HOME/bin/oggca.sh
+
+<span class="cm"># Silent install (for automation):</span>
+$OGG_HOME/bin/oggca.sh -silent -responseFile /tmp/oggca.rsp
+
+<span class="cm"># Key entries in oggca.rsp:</span>
+DEPLOYMENT_NAME=OGG_PROD
+PORT_MANAGER=9100
+OGG_HOME=/u01/app/oracle/goldengate/19c
+OGG_DATA=/u01/app/oracle/goldengate/data
+DB_CONNECTION_STRING=orcl
+DB_ADMIN_USER=ggadmin
+DB_ADMIN_PASSWORD=Oracle_4U</code></pre>
+
+      <h2>Managing via REST API</h2>
+      <pre><code><span class="cm"># Base URL for the Administration Service:</span>
+BASE=https://sourceserver:9101/services/v2
+
+<span class="cm"># Create an Extract:</span>
+curl -X POST $BASE/extracts \
+  -H <span class="st">'Content-Type: application/json'</span> \
+  -u ggadmin:Oracle_4U \
+  -d <span class="st">'{"name":"EXTHR","type":"INTEGRATED","trailName":"ex"}'</span>
+
+<span class="cm"># Start Extract:</span>
+curl -X POST $BASE/extracts/EXTHR/commands/start -u ggadmin:Oracle_4U
+
+<span class="cm"># Get status:</span>
+curl -X GET $BASE/extracts/EXTHR -u ggadmin:Oracle_4U | python3 -m json.tool
+
+<span class="cm"># Get lag:</span>
+curl -X GET $BASE/extracts/EXTHR/lag -u ggadmin:Oracle_4U</code></pre>
+
+      <h2>Web Console Features</h2>
+      <p>Access the web console at <code>https://&lt;service-manager-host&gt;:9100</code></p>
+      <ul>
+        <li><strong>Overview dashboard</strong> — All deployments and process status at a glance</li>
+        <li><strong>Extract/Replicat management</strong> — Create, start, stop, edit via GUI (no parameter files needed)</li>
+        <li><strong>Performance Metrics</strong> — Real-time charts: operations/sec, lag, trail write rate</li>
+        <li><strong>Trail browser</strong> — View trail file positions and content</li>
+        <li><strong>Integrated logging</strong> — Search and filter process report files</li>
+        <li><strong>Distribution paths</strong> — Configure routing between source and target</li>
+      </ul>
+    </section>
+
+    <!-- ══ MODULE 12: SECURITY ══ -->
+    <section class="module" id="mod-security">
+      <div class="module-header">
+        <div class="module-tag">Module 12</div>
+        <h1 class="module-title">GoldenGate Security</h1>
+        <p class="module-intro">Securing GoldenGate involves encrypting database passwords in parameter files, encrypting trail files, and securing the network transport. Never store plain-text passwords.</p>
+      </div>
+
+      <h2>Password Encryption (Basic)</h2>
+      <pre><code><span class="cm">-- Encrypt a password in GGSCI:</span>
+GGSCI&gt; ENCRYPT PASSWORD Oracle_4U BLOWFISH
+<span class="cm">-- Output: AACAAAAAAAAAAAJAUZCDCDABFAAAAAAA</span>
+
+<span class="cm">-- Use it in parameter files:</span>
+USERID ggadmin, PASSWORD AACAAAAAAAAAAAJAUZCDCDABFAAAAAAA ENCRYPTKEY DEFAULT</code></pre>
+
+      <h2>Oracle Wallet / Credential Store (Recommended)</h2>
+      <pre><code><span class="cm">-- Create the credential store:</span>
+GGSCI&gt; CREATE CREDENTIALSTORE
+
+<span class="cm">-- Add a credential alias:</span>
+GGSCI&gt; ALTER CREDENTIALSTORE ADD USER ggadmin@orcl PASSWORD Oracle_4U ALIAS ggalias
+
+<span class="cm">-- Now in ALL parameter files, replace USERID/PASSWORD with:</span>
+USERIDALIAS ggalias         <span class="cm">← No password visible anywhere</span>
+
+<span class="cm">-- Verify:</span>
+GGSCI&gt; INFO CREDENTIALSTORE</code></pre>
+
+      <h2>Trail File Encryption</h2>
+      <pre><code><span class="cm">-- Generate a master key:</span>
+GGSCI&gt; CREATE MASTERKEY
+GGSCI&gt; ENCRYPT MASTERKEY AES256
+
+<span class="cm">-- In Extract parameter file:</span>
+ENCRYPTTRAIL AES256
+
+<span class="cm">-- In Replicat parameter file:</span>
+DECRYPTTRAIL AES256</code></pre>
+
+      <h2>Network Encryption (Microservices)</h2>
+      <pre><code><span class="cm"># In oggca.rsp for MA deployments:</span>
+SSL_ENABLED=true
+SSL_CERTIFICATE=/path/to/cert.pem
+SSL_PRIVATE_KEY=/path/to/key.pem
+SSL_CA_CERTIFICATE=/path/to/ca.pem</code></pre>
+
+      <div class="callout tip">
+        <div class="callout-icon">✅</div>
+        <div><strong>Security best practices summary</strong> (1) Always use credential store aliases, never plain-text passwords. (2) Encrypt trail files with AES-256 in any environment that's not fully isolated. (3) Use TLS for MA deployments. (4) Restrict OS access to $OGG_HOME — trail files contain your production data.</div>
+      </div>
+    </section>
+
+    <!-- ══ MODULE 13: PERFORMANCE ══ -->
+    <section class="module" id="mod-perf">
+      <div class="module-header">
+        <div class="module-tag">Module 13</div>
+        <h1 class="module-title">Performance Tuning</h1>
+        <p class="module-intro">Understanding where bottlenecks occur — and how to fix them — is what separates a junior DBA from a GoldenGate expert.</p>
+      </div>
+
+      <h2>Tuning Extract Performance</h2>
+      <pre><code><span class="cm">-- $OGG_HOME/dirprm/exthr.prm — Performance settings:</span>
+EXTRACT exthr
+USERIDALIAS ggalias
+
+<span class="cm">-- Asynchronous redo log I/O (reduces CPU wait):</span>
+TRANLOGOPTIONS ASYNCIO
+
+<span class="cm">-- Increase log reader I/O buffer:</span>
+TRANLOGOPTIONS DBLOGREADER IOBUFSIZE 8192
+
+<span class="cm">-- Increase Extract write buffer to trail:</span>
+BUFSIZE 64
+
+<span class="cm">-- More frequent checkpoints = better recovery time:</span>
+CHECKPOINTSECS 30
+
+EXTTRAIL ./dirdat/ex
+TABLE hr.*;</code></pre>
+
+      <h2>Tuning Replicat Performance</h2>
+      <pre><code><span class="cm">-- $OGG_HOME/dirprm/rephr.prm — High-throughput settings:</span>
+REPLICAT rephr
+USERIDALIAS ggalias
+ASSUMETARGETDEFS
+
+<span class="cm">-- Parallel apply (most impactful tuning option):</span>
+PARALLELISM 4                   <span class="cm">← Start with 4 threads</span>
+MAXPARALLELISM 8                <span class="cm">← Allow auto-scaling up to 8</span>
+
+<span class="cm">-- Batch SQL for bulk efficiency:</span>
+BATCHSQL
+BATCHSQLOPTIONS OPBUFSIZE 4096, MAXBATCHSIZE 1024
+
+<span class="cm">-- Group transactions to reduce commit overhead:</span>
+GROUPTRANSOPS 1000              <span class="cm">← Group up to 1000 ops per commit</span>
+MAXTRANSOPS 10000               <span class="cm">← Force commit after 10000 ops max</span>
+
+MAP hr.*,  TARGET hr.*;</code></pre>
+
+      <h2>Performance Troubleshooting Checklist</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Symptom</th><th>Likely Cause</th><th>Fix</th></tr></thead>
+          <tbody>
+            <tr><td>Extract lag climbing</td><td>Redo log I/O bottleneck</td><td>Add <code>ASYNCIO</code>; move redo to faster storage</td></tr>
+            <tr><td>Trail files growing fast</td><td>High DML volume + slow Replicat</td><td>Tune Replicat; add PARALLELISM</td></tr>
+            <tr><td>Replicat lag climbing</td><td>Single-threaded apply under high load</td><td>Switch to Parallel Replicat with PARALLELISM 4+</td></tr>
+            <tr><td>Network lag spikes</td><td>WAN bandwidth saturation</td><td>Add COMPRESS to Data Pump; schedule large loads</td></tr>
+            <tr><td>LOB columns slow</td><td>LOBs increase redo volume significantly</td><td>Exclude LOBs if not needed; use FETCHOPTIONS</td></tr>
+            <tr><td>Long transactions</td><td>Uncommitted TX holds Extract read position</td><td>Find and commit/rollback long-running transactions</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Compressing Trail Data in Data Pump</h2>
+      <pre><code><span class="cm">-- In pmphr.prm — compress trail data before sending over WAN:</span>
+EXTRACT pmphr
+RMTHOST targetserver.example.com, MGRPORT 7809, COMPRESS
+RMTTRAIL ./dirdat/rt
+
+TABLE hr.*;</code></pre>
+    </section>
+
+    <!-- ══ MODULE 14: TROUBLESHOOTING ══ -->
+    <section class="module" id="mod-trouble">
+      <div class="module-header">
+        <div class="module-tag">Module 14</div>
+        <h1 class="module-title">Troubleshooting Guide</h1>
+        <p class="module-intro">A systematic approach to diagnosing and resolving GoldenGate issues — from minor ABENDs to major re-sync scenarios.</p>
+      </div>
+
+      <h2>Troubleshooting Framework (Always Follow This Order)</h2>
+      <ol>
+        <li>Run <code>INFO ALL</code> — identify which process is ABENDED or STOPPED</li>
+        <li>Run <code>VIEW REPORT &lt;processname&gt;</code> — find the error at the bottom</li>
+        <li>Run <code>VIEW GGSEVT</code> — check for system-level events</li>
+        <li>Check OS logs: <code>/var/log/messages</code>, Oracle alert log</li>
+        <li>Use LOGDUMP to inspect trail file contents if needed</li>
+        <li>Check database views: <code>V$GOLDENGATE_STATS</code>, alert log</li>
+      </ol>
+
+      <h2>Common Errors &amp; Resolutions</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Error</th><th>Root Cause</th><th>Resolution</th></tr></thead>
+          <tbody>
+            <tr><td><code>OGG-00446</code> — Error opening log file</td><td>Archive log deleted before Extract captured it</td><td>Increase archive retention; check <code>ARCHIVELOG_DEST</code></td></tr>
+            <tr><td><code>OGG-01161</code> — Bad column length</td><td>Column definition mismatch source vs. target</td><td>Run DEFGEN; update SOURCEDEFS; check column sizes</td></tr>
+            <tr><td><code>ORA-01403</code> — No data found</td><td>Delete/update for a row that doesn't exist on target</td><td>Add <code>REPERROR(1403, DISCARD)</code>; verify initial load completed</td></tr>
+            <tr><td><code>ORA-00001</code> — Unique constraint</td><td>Duplicate key — initial load + Replicat overlap</td><td>Use <code>HANDLECOLLISIONS</code> during sync phase; remove after</td></tr>
+            <tr><td><code>OGG-01224</code> — TCP/IP error</td><td>Network connectivity to target Manager failed</td><td>Check firewall; verify Manager running; verify port 7809</td></tr>
+            <tr><td><code>OGG-00664</code> — OCI error fetching row</td><td>Long-running uncommitted transaction holding read position</td><td>Find and commit/rollback the long transaction on source</td></tr>
+            <tr><td>Extract ABEND: missing archived log</td><td>Archives purged before Extract processed them</td><td>Increase archive retention; consider <code>ARCH_LOG_LATE_ARRIVAL</code></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Using LOGDUMP to Inspect Trail Files</h2>
+      <pre><code><span class="cm"># Start LOGDUMP:</span>
+cd $OGG_HOME
+./logdump
+
+LOGDUMP&gt; OPEN ./dirdat/ex000001
+LOGDUMP&gt; GHDR ON               <span class="cm">-- Show GoldenGate transaction header</span>
+LOGDUMP&gt; DETAIL ON             <span class="cm">-- Show all column before/after values</span>
+LOGDUMP&gt; USERTOKEN ON          <span class="cm">-- Show user-defined tokens</span>
+LOGDUMP&gt; NEXT                  <span class="cm">-- Show next record</span>
+LOGDUMP&gt; NEXT 5                <span class="cm">-- Advance 5 records</span>
+
+<span class="cm">-- Filter to a specific table:</span>
+LOGDUMP&gt; FILTER INCLUDE TABNAME hr.employees
+LOGDUMP&gt; POS FIRST
+LOGDUMP&gt; NEXT
+
+<span class="cm">-- Find records before a specific time:</span>
+LOGDUMP&gt; FILTER INCLUDE BEFORETIME <span class="st">'2024-06-01 10:00:00'</span>
+LOGDUMP&gt; NEXT
+
+LOGDUMP&gt; QUIT</code></pre>
+
+      <h2>Emergency Re-Synchronization Procedure</h2>
+      <ol>
+        <li>Stop all GoldenGate processes immediately</li>
+        <li>Document the situation: what trail files exist, last known good Replicat position</li>
+        <li>If trail files cover the gap → reset Replicat to last good checkpoint and restart</li>
+        <li>If trail files are missing or data is corrupt → perform new initial load (see Module 6)</li>
+        <li>After re-sync: start with <code>HANDLECOLLISIONS</code> enabled, monitor closely for 24 hours, then remove it</li>
+      </ol>
+
+      <pre><code><span class="cm">-- Check Replicat's last checkpoint (last successfully applied SCN):</span>
+<span class="kw">SELECT</span> group_name, log_csn, log_position
+<span class="kw">FROM</span>   ggadmin.chkpt
+<span class="kw">ORDER BY</span> last_update_ts <span class="kw">DESC FETCH FIRST</span> <span class="nm">5</span> <span class="kw">ROWS ONLY</span>;</code></pre>
+    </section>
+
+    <!-- ══ MODULE 15: LABS ══ -->
+    <section class="module" id="mod-labs">
+      <div class="module-header">
+        <div class="module-tag">Module 15</div>
+        <h1 class="module-title">Practice Labs</h1>
+        <p class="module-intro">Five hands-on labs that take you from basic replication to advanced bidirectional setups. Each lab has clear success criteria so you know when you've completed it.</p>
+      </div>
+
+      <div class="lab-card">
+        <div class="lab-card-tag">Lab 01 · Foundations</div>
+        <h3>Basic Unidirectional Setup</h3>
+        <div class="lab-meta">
+          <div class="lab-meta-item">⏱ Estimated time: <span>90 minutes</span></div>
+          <div class="lab-meta-item">📊 Difficulty: <span>Beginner</span></div>
+          <div class="lab-meta-item">📦 Prereq: <span>Modules 1–4</span></div>
+        </div>
+        <div class="lab-objectives">
+          <ul>
+            <li>Configure source database (ARCHIVELOG, supplemental logging, force logging)</li>
+            <li>Create GoldenGate users on both source and target</li>
+            <li>Install GoldenGate and configure Manager on both servers</li>
+            <li>Configure Extract, Data Pump, and Replicat</li>
+            <li>Perform initial load with EXPDP/IMPDP using FLASHBACK_SCN</li>
+            <li>Start all processes and verify with INFO ALL</li>
+            <li>Test with INSERT, UPDATE, DELETE — verify on target within 5 seconds</li>
+          </ul>
+        </div>
+      </div>
+      <div class="callout note"><div class="callout-icon">🏆</div><div><strong>Success criteria:</strong> All processes RUNNING, lag &lt; 10 seconds, test DML appears on target within 5 seconds, STATS REPLICAT shows matching counts.</div></div>
+
+      <div class="lab-card">
+        <div class="lab-card-tag">Lab 02 · Transformation</div>
+        <h3>Filter and Transform Data</h3>
+        <div class="lab-meta">
+          <div class="lab-meta-item">⏱ Estimated time: <span>45 minutes</span></div>
+          <div class="lab-meta-item">📊 Difficulty: <span>Beginner-Intermediate</span></div>
+          <div class="lab-meta-item">📦 Prereq: <span>Lab 01 complete, Module 8</span></div>
+        </div>
+        <div class="lab-objectives">
+          <ul>
+            <li>Add a WHERE filter to only replicate employees with status = 'ACTIVE'</li>
+            <li>Add a COLMAP to transform last_name to UPPER CASE on the target</li>
+            <li>Insert an INACTIVE employee on source — verify it does NOT appear on target</li>
+            <li>Insert an ACTIVE employee — verify it appears with name in uppercase</li>
+          </ul>
+        </div>
+      </div>
+      <div class="callout note"><div class="callout-icon">🏆</div><div><strong>Success criteria:</strong> INACTIVE employees not replicated. ACTIVE employees appear with UPPER CASE names. Existing rows unaffected.</div></div>
+
+      <div class="lab-card">
+        <div class="lab-card-tag">Lab 03 · Conflict Resolution</div>
+        <h3>Bidirectional with CDR</h3>
+        <div class="lab-meta">
+          <div class="lab-meta-item">⏱ Estimated time: <span>90 minutes</span></div>
+          <div class="lab-meta-item">📊 Difficulty: <span>Intermediate-Advanced</span></div>
+          <div class="lab-meta-item">📦 Prereq: <span>Modules 10, two Oracle DBs available</span></div>
+        </div>
+        <div class="lab-objectives">
+          <ul>
+            <li>Configure bidirectional replication between two Oracle databases</li>
+            <li>Enable loop prevention using TRANLOGOPTIONS EXCLUDETAG</li>
+            <li>Configure RESOLVECONFLICT USEMAX on the salary column</li>
+            <li>Pause both Replicats, update the same row on both DBs with different values, resume</li>
+            <li>Verify USEMAX wins and check CDR statistics</li>
+          </ul>
+        </div>
+      </div>
+      <div class="callout note"><div class="callout-icon">🏆</div><div><strong>Success criteria:</strong> No infinite loop. The higher salary value wins the conflict on both databases. STATS REPLICAT shows CDR conflicts detected and resolved.</div></div>
+
+      <div class="lab-card">
+        <div class="lab-card-tag">Lab 04 · DDL</div>
+        <h3>DDL Replication</h3>
+        <div class="lab-meta">
+          <div class="lab-meta-item">⏱ Estimated time: <span>60 minutes</span></div>
+          <div class="lab-meta-item">📊 Difficulty: <span>Intermediate</span></div>
+          <div class="lab-meta-item">📦 Prereq: <span>Lab 01 complete, Module 7</span></div>
+        </div>
+        <div class="lab-objectives">
+          <ul>
+            <li>Install DDL support objects on source database</li>
+            <li>Add DDL INCLUDE MAPPED to both Extract and Replicat parameter files</li>
+            <li>On source: ALTER TABLE hr.employees ADD (phone_mobile VARCHAR2(20))</li>
+            <li>Verify the new column exists on target automatically</li>
+            <li>Insert a row with the new column on source; verify it appears on target</li>
+          </ul>
+        </div>
+      </div>
+      <div class="callout note"><div class="callout-icon">🏆</div><div><strong>Success criteria:</strong> DDL replicated — new column exists on target. Subsequent DML with new column replicates successfully.</div></div>
+
+      <div class="lab-card">
+        <div class="lab-card-tag">Lab 05 · Performance</div>
+        <h3>Performance Tuning Under Load</h3>
+        <div class="lab-meta">
+          <div class="lab-meta-item">⏱ Estimated time: <span>60 minutes</span></div>
+          <div class="lab-meta-item">📊 Difficulty: <span>Advanced</span></div>
+          <div class="lab-meta-item">📦 Prereq: <span>Lab 01 complete, Module 13</span></div>
+        </div>
+        <div class="lab-objectives">
+          <ul>
+            <li>Generate load: 50,000 rows/minute using a provided load script</li>
+            <li>Observe Replicat lag climbing above 30 seconds</li>
+            <li>Diagnose the bottleneck using STATS REPLICAT and OS tools (iostat, top)</li>
+            <li>Apply PARALLELISM 4 and BATCHSQL to the Replicat parameter file</li>
+            <li>Restart Replicat and observe lag returning below 5 seconds</li>
+          </ul>
+        </div>
+      </div>
+      <div class="callout note"><div class="callout-icon">🏆</div><div><strong>Success criteria:</strong> Lag reduced from &gt;30s to &lt;5s after tuning. STATS REPLICAT shows higher operations/sec.</div></div>
+    </section>
+
+    <!-- ══ MODULE 16: ASSESSMENTS ══ -->
+    <section class="module" id="mod-assess">
+      <div class="module-header">
+        <div class="module-tag">Module 16</div>
+        <h1 class="module-title">Assessments</h1>
+        <p class="module-intro">20 interactive questions across all modules. Click an answer to check it — green means correct, red means try again (the correct answer will be shown).</p>
+      </div>
+
+      <h2>Section A — Architecture (Modules 1–2)</h2>
+
+      <div class="quiz-card" data-correct="1">
+        <div class="quiz-question"><span>Q1</span> What is the primary source from which GoldenGate Extract reads data?</div>
+        <div class="quiz-options">
+          <div class="quiz-option"><div class="opt-letter">A</div> SELECT queries on the source database tables</div>
+          <div class="quiz-option"><div class="opt-letter">B</div> Database redo/archive log files</div>
+          <div class="quiz-option"><div class="opt-letter">C</div> The database buffer cache</div>
+          <div class="quiz-option"><div class="opt-letter">D</div> A full table scan of changed rows</div>
+        </div>
+      </div>
+
+      <div class="quiz-card" data-correct="2">
+        <div class="quiz-question"><span>Q2</span> Which process moves trail files from the source server to the target server?</div>
+        <div class="quiz-options">
+          <div class="quiz-option"><div class="opt-letter">A</div> Primary Extract</div>
+          <div class="quiz-option"><div class="opt-letter">B</div> Replicat</div>
+          <div class="quiz-option"><div class="opt-letter">C</div> Data Pump Extract</div>
+          <div class="quiz-option"><div class="opt-letter">D</div> Manager</div>
+        </div>
+      </div>
+
+      <div class="quiz-card" data-correct="1">
+        <div class="quiz-question"><span>Q3</span> What does supplemental logging do?</div>
+        <div class="quiz-options">
+          <div class="quiz-option"><div class="opt-letter">A</div> Creates a GoldenGate audit log for all process activity</div>
+          <div class="quiz-option"><div class="opt-letter">B</div> Adds extra column data to redo log records so GoldenGate can reconstruct full row images</div>
+          <div class="quiz-option"><div class="opt-letter">C</div> Enables GoldenGate to log its own internal statistics</div>
+          <div class="quiz-option"><div class="opt-letter">D</div> Turns on Oracle's own change data capture feature</div>
+        </div>
+      </div>
+
+      <div class="quiz-card" data-correct="2">
+        <div class="quiz-question"><span>Q4</span> Which GoldenGate process MUST be started before all others?</div>
+        <div class="quiz-options">
+          <div class="quiz-option"><div class="opt-letter">A</div> Extract</div>
+          <div class="quiz-option"><div class="opt-letter">B</div> Replicat</div>
+          <div class="quiz-option"><div class="opt-letter">C</div> Manager</div>
+          <div class="quiz-option"><div class="opt-letter">D</div> Collector</div>
+        </div>
+      </div>
+
+      <div class="quiz-card" data-correct="1">
+        <div class="quiz-question"><span>Q5</span> In Microservices Architecture, what replaces the classic Data Pump Extract?</div>
+        <div class="quiz-options">
+          <div class="quiz-option"><div class="opt-letter">A</div> Receiver Service</div>
+          <div class="quiz-option"><div class="opt-letter">B</div> Distribution Service</div>
+          <div class="quiz-option"><div class="opt-letter">C</div> Administration Service</div>
+          <div class="quiz-option"><div class="opt-letter">D</div> Performance Metrics Service</div>
+        </div>
+      </div>
+
+      <h2>Section B — Installation &amp; Configuration (Modules 3–6)</h2>
+
+      <div class="quiz-card" data-correct="1">
+        <div class="quiz-question"><span>Q6</span> Which Oracle database mode is REQUIRED for GoldenGate Extract?</div>
+        <div class="quiz-options">
+          <div class="quiz-option"><div class="opt-letter">A</div> NOARCHIVELOG mode</div>
+          <div class="quiz-option"><div class="opt-letter">B</div> ARCHIVELOG mode</div>
+          <div class="quiz-option"><div class="opt-letter">C</div> STANDBY mode</div>
+          <div class="quiz-option"><div class="opt-letter">D</div> READ ONLY mode</div>
+        </div>
+      </div>
+
+      <div class="quiz-card" data-correct="1">
+        <div class="quiz-question"><span>Q7</span> What does the PASSTHRU parameter in a Data Pump parameter file mean?</div>
+        <div class="quiz-options">
+          <div class="quiz-option"><div class="opt-letter">A</div> Skip all error handling</div>
+          <div class="quiz-option"><div class="opt-letter">B</div> Forward data to the target unchanged, without any processing or transformation</div>
+          <div class="quiz-option"><div class="opt-letter">C</div> Apply transformations before sending to target</div>
+          <div class="quiz-option"><div class="opt-letter">D</div> Encrypt trail data before transmission</div>
+        </div>
+      </div>
+
+      <div class="quiz-card" data-correct="1">
+        <div class="quiz-question"><span>Q8</span> What is the purpose of the checkpoint table (ggadmin.chkpt)?</div>
+        <div class="quiz-options">
+          <div class="quiz-option"><div class="opt-letter">A</div> Store GoldenGate parameter file configuration</div>
+          <div class="quiz-option"><div class="opt-letter">B</div> Record where Replicat has read in the trail files so it can resume after a restart</div>
+          <div class="quiz-option"><div class="opt-letter">C</div> Store DDL replication history</div>
+          <div class="quiz-option"><div class="opt-letter">D</div> Log conflict resolution events for bidirectional replication</div>
+        </div>
+      </div>
+
+      <div class="quiz-card" data-correct="1">
+        <div class="quiz-question"><span>Q9</span> When performing an initial load with EXPDP, why use FLASHBACK_SCN?</div>
+        <div class="quiz-options">
+          <div class="quiz-option"><div class="opt-letter">A</div> To export the schema metadata only, without data</div>
+          <div class="quiz-option"><div class="opt-letter">B</div> To get a consistent snapshot at a specific SCN so ongoing changes from that SCN can be replicated without gaps or duplicates</div>
+          <div class="quiz-option"><div class="opt-letter">C</div> To exclude certain tables from the export</div>
+          <div class="quiz-option"><div class="opt-letter">D</div> To reduce the size of the dump file</div>
+        </div>
+      </div>
+
+      <div class="quiz-card" data-correct="1">
+        <div class="quiz-question"><span>Q10</span> What does GGSCI command ADD TRANDATA hr.employees do?</div>
+        <div class="quiz-options">
+          <div class="quiz-option"><div class="opt-letter">A</div> Creates hr.employees on the target database</div>
+          <div class="quiz-option"><div class="opt-letter">B</div> Enables supplemental logging on hr.employees at the table level</div>
+          <div class="quiz-option"><div class="opt-letter">C</div> Adds hr.employees to the Extract's TABLE list in memory</div>
+          <div class="quiz-option"><div class="opt-letter">D</div> Grants SELECT privilege to ggadmin on hr.employees</div>
+        </div>
+      </div>
+
+      <h2>Section C — Administration (Modules 9–10)</h2>
+
+      <div class="quiz-card" data-correct="2">
+        <div class="quiz-question"><span>Q11</span> A Replicat shows state ABENDED. What is your FIRST action?</div>
+        <div class="quiz-options">
+          <div class="quiz-option"><div class="opt-letter">A</div> Delete and recreate the Replicat process</div>
+          <div class="quiz-option"><div class="opt-letter">B</div> Restart it immediately with START REPLICAT</div>
+          <div class="quiz-option"><div class="opt-letter">C</div> Run VIEW REPORT to find the error message at the bottom of the report file</div>
+          <div class="quiz-option"><div class="opt-letter">D</div> Reset Replicat position to the beginning of the trail</div>
+        </div>
+      </div>
+
+      <div class="quiz-card" data-correct="1">
+        <div class="quiz-question"><span>Q12</span> Which GGSCI command shows ALL process statuses at once?</div>
+        <div class="quiz-options">
+          <div class="quiz-option"><div class="opt-letter">A</div> STATUS ALL</div>
+          <div class="quiz-option"><div class="opt-letter">B</div> INFO ALL</div>
+          <div class="quiz-option"><div class="opt-letter">C</div> SHOW ALL</div>
+          <div class="quiz-option"><div class="opt-letter">D</div> LIST PROCESSES</div>
+        </div>
+      </div>
+
+      <div class="quiz-card" data-correct="1">
+        <div class="quiz-question"><span>Q13</span> How do you prevent changes replicated TO Database B from being re-captured by B's Extract?</div>
+        <div class="quiz-options">
+          <div class="quiz-option"><div class="opt-letter">A</div> Use the FILTERDUP parameter in Extract</div>
+          <div class="quiz-option"><div class="opt-letter">B</div> Use TRANLOGOPTIONS EXCLUDETAG in Extract</div>
+          <div class="quiz-option"><div class="opt-letter">C</div> Use the NOLOOP parameter in Manager</div>
+          <div class="quiz-option"><div class="opt-letter">D</div> Set IGNOREAPPLY=TRUE in the Replicat parameter file</div>
+        </div>
+      </div>
+
+      <div class="quiz-card" data-correct="1">
+        <div class="quiz-question"><span>Q14</span> What does the CDR resolution strategy USEMAX do?</div>
+        <div class="quiz-options">
+          <div class="quiz-option"><div class="opt-letter">A</div> Keeps the row with the maximum primary key value</div>
+          <div class="quiz-option"><div class="opt-letter">B</div> Keeps the larger of the two conflicting column values</div>
+          <div class="quiz-option"><div class="opt-letter">C</div> Waits the maximum configured time before aborting conflict resolution</div>
+          <div class="quiz-option"><div class="opt-letter">D</div> Applies the maximum number of retry attempts</div>
+        </div>
+      </div>
+
+      <div class="quiz-card" data-correct="1">
+        <div class="quiz-question"><span>Q15</span> Which utility do you use to inspect the contents of a trail file?</div>
+        <div class="quiz-options">
+          <div class="quiz-option"><div class="opt-letter">A</div> Run cat ./dirdat/ex000001 in the terminal</div>
+          <div class="quiz-option"><div class="opt-letter">B</div> Use the LOGDUMP utility ($OGG_HOME/logdump)</div>
+          <div class="quiz-option"><div class="opt-letter">C</div> Query the trail contents using SQL*Plus</div>
+          <div class="quiz-option"><div class="opt-letter">D</div> Use SQL*Loader to read the binary trail format</div>
+        </div>
+      </div>
+
+      <h2>Section D — Advanced Topics (Modules 11–14)</h2>
+
+      <div class="quiz-card" data-correct="2">
+        <div class="quiz-question"><span>Q16</span> In GoldenGate Microservices Architecture, what is the default port for the Service Manager?</div>
+        <div class="quiz-options">
+          <div class="quiz-option"><div class="opt-letter">A</div> 7809</div>
+          <div class="quiz-option"><div class="opt-letter">B</div> 1521</div>
+          <div class="quiz-option"><div class="opt-letter">C</div> 9100</div>
+          <div class="quiz-option"><div class="opt-letter">D</div> 8080</div>
+        </div>
+      </div>
+
+      <div class="quiz-card" data-correct="1">
+        <div class="quiz-question"><span>Q17</span> Which Replicat parameter enables multi-threaded parallel apply?</div>
+        <div class="quiz-options">
+          <div class="quiz-option"><div class="opt-letter">A</div> APPLYTHREADS</div>
+          <div class="quiz-option"><div class="opt-letter">B</div> PARALLELISM</div>
+          <div class="quiz-option"><div class="opt-letter">C</div> THREADS</div>
+          <div class="quiz-option"><div class="opt-letter">D</div> MAXWORKERS</div>
+        </div>
+      </div>
+
+      <div class="quiz-card" data-correct="1">
+        <div class="quiz-question"><span>Q18</span> What does BATCHSQL do in a Replicat parameter file?</div>
+        <div class="quiz-options">
+          <div class="quiz-option"><div class="opt-letter">A</div> Runs a SQL script during Replicat startup</div>
+          <div class="quiz-option"><div class="opt-letter">B</div> Groups multiple DML operations into batches for more efficient bulk apply to the target DB</div>
+          <div class="quiz-option"><div class="opt-letter">C</div> Applies SQL transformation functions to column values</div>
+          <div class="quiz-option"><div class="opt-letter">D</div> Enables SQL*Plus compatibility mode for the Replicat session</div>
+        </div>
+      </div>
+
+      <div class="quiz-card" data-correct="1">
+        <div class="quiz-question"><span>Q19</span> You receive OGG-01161 "Bad column length". What is the most likely cause?</div>
+        <div class="quiz-options">
+          <div class="quiz-option"><div class="opt-letter">A</div> Network packet corruption during trail file transmission</div>
+          <div class="quiz-option"><div class="opt-letter">B</div> A column definition mismatch between the source and target schemas</div>
+          <div class="quiz-option"><div class="opt-letter">C</div> The trail file has been corrupted on disk</div>
+          <div class="quiz-option"><div class="opt-letter">D</div> A port conflict between Manager and Collector</div>
+        </div>
+      </div>
+
+      <div class="quiz-card" data-correct="2">
+        <div class="quiz-question"><span>Q20</span> Which GGSCI command encrypts a database password for use in parameter files?</div>
+        <div class="quiz-options">
+          <div class="quiz-option"><div class="opt-letter">A</div> ENCRYPT USERID ggadmin</div>
+          <div class="quiz-option"><div class="opt-letter">B</div> OBFUSCATE PASSWORD Oracle_4U</div>
+          <div class="quiz-option"><div class="opt-letter">C</div> ENCRYPT PASSWORD Oracle_4U BLOWFISH</div>
+          <div class="quiz-option"><div class="opt-letter">D</div> HASH PASSWORD Oracle_4U AES256</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ MODULE 17: QUICK REFERENCE ══ -->
+    <section class="module" id="mod-ref">
+      <div class="module-header">
+        <div class="module-tag">Module 17</div>
+        <h1 class="module-title">Quick Reference &amp; Cheat Sheet</h1>
+        <p class="module-intro">Everything you need in one place. Bookmark this page for day-to-day GoldenGate administration.</p>
+      </div>
+
+      <h2>GGSCI Quick Commands</h2>
+      <div class="ref-grid">
+        <div class="ref-card"><div class="ref-card-label">Start GGSCI</div><div class="ref-card-cmd">cd $OGG_HOME && ./ggsci</div></div>
+        <div class="ref-card"><div class="ref-card-label">Connect to DB</div><div class="ref-card-cmd">DBLOGIN USERID ggadmin PASSWORD x</div></div>
+        <div class="ref-card"><div class="ref-card-label">All process status</div><div class="ref-card-cmd">INFO ALL</div></div>
+        <div class="ref-card"><div class="ref-card-label">Start Manager</div><div class="ref-card-cmd">START MANAGER</div></div>
+        <div class="ref-card"><div class="ref-card-label">Start Extract</div><div class="ref-card-cmd">START EXTRACT exthr</div></div>
+        <div class="ref-card"><div class="ref-card-label">Stop Replicat</div><div class="ref-card-cmd">STOP REPLICAT rephr</div></div>
+        <div class="ref-card"><div class="ref-card-label">View report</div><div class="ref-card-cmd">VIEW REPORT exthr</div></div>
+        <div class="ref-card"><div class="ref-card-label">View event log</div><div class="ref-card-cmd">VIEW GGSEVT</div></div>
+        <div class="ref-card"><div class="ref-card-label">Stats total</div><div class="ref-card-cmd">STATS REPLICAT rephr, TOTAL</div></div>
+        <div class="ref-card"><div class="ref-card-label">Check lag</div><div class="ref-card-cmd">LAG EXTRACT exthr</div></div>
+        <div class="ref-card"><div class="ref-card-label">Add supplemental logging</div><div class="ref-card-cmd">ADD TRANDATA hr.employees</div></div>
+        <div class="ref-card"><div class="ref-card-label">Add Extract</div><div class="ref-card-cmd">ADD EXTRACT exthr, INTEGRATED TRANLOG, BEGIN NOW</div></div>
+        <div class="ref-card"><div class="ref-card-label">Add local trail</div><div class="ref-card-cmd">ADD EXTTRAIL ./dirdat/ex, EXTRACT exthr, MEGABYTES 200</div></div>
+        <div class="ref-card"><div class="ref-card-label">Add remote trail</div><div class="ref-card-cmd">ADD RMTTRAIL ./dirdat/rt, EXTRACT pmphr, MEGABYTES 200</div></div>
+        <div class="ref-card"><div class="ref-card-label">Add Data Pump</div><div class="ref-card-cmd">ADD EXTRACT pmphr, EXTTRAILSOURCE ./dirdat/ex</div></div>
+        <div class="ref-card"><div class="ref-card-label">Add Replicat</div><div class="ref-card-cmd">ADD REPLICAT rephr, INTEGRATED, EXTTRAIL ./dirdat/rt, CHECKPOINTTABLE ggadmin.chkpt</div></div>
+        <div class="ref-card"><div class="ref-card-label">Add checkpoint table</div><div class="ref-card-cmd">ADD CHECKPOINTTABLE ggadmin.chkpt</div></div>
+        <div class="ref-card"><div class="ref-card-label">Encrypt password</div><div class="ref-card-cmd">ENCRYPT PASSWORD Oracle_4U BLOWFISH</div></div>
+        <div class="ref-card"><div class="ref-card-label">Purge trail files</div><div class="ref-card-cmd">PURGE EXTTRAIL ./dirdat/ex, USECHECKPOINTS</div></div>
+        <div class="ref-card"><div class="ref-card-label">Register Extract</div><div class="ref-card-cmd">REGISTER EXTRACT exthr DATABASE</div></div>
+      </div>
+
+      <h2>Parameter File Templates</h2>
+      <h3>Manager (mgr.prm)</h3>
+      <pre><code>PORT 7809
+DYNAMICPORTLIST 7840-7920
+AUTORESTART EXTRACT *, WAITMINUTES 2, RESETMINUTES 5
+AUTORESTART REPLICAT *, WAITMINUTES 2, RESETMINUTES 5
+PURGEOLDEXTRACTS ./dirdat/*, USECHECKPOINTS, MINKEEPDAYS 3
+LAGREPORTHOURS 1
+LAGINFOMINUTES 30
+LAGCRITICALMINUTES 45</code></pre>
+
+      <h3>Primary Extract (exthr.prm)</h3>
+      <pre><code>EXTRACT exthr
+USERIDALIAS ggalias
+EXTTRAIL ./dirdat/ex
+DISCARDFILE ./direrr/exthr.dsc, APPEND, MEGABYTES 100
+TRANLOGOPTIONS ASYNCIO
+CHECKPOINTSECS 30
+DDL INCLUDE MAPPED          <span class="cm">-- remove if DDL replication not needed</span>
+
+TABLE hr.employees;
+TABLE hr.departments;
+TABLE hr.jobs;</code></pre>
+
+      <h3>Data Pump (pmphr.prm)</h3>
+      <pre><code>EXTRACT pmphr
+PASSTHRU
+RMTHOST targetserver.example.com, MGRPORT 7809
+RMTTRAIL ./dirdat/rt
+DISCARDFILE ./direrr/pmphr.dsc, APPEND, MEGABYTES 100
+
+TABLE hr.*;</code></pre>
+
+      <h3>Parallel Replicat (rephr.prm)</h3>
+      <pre><code>REPLICAT rephr
+USERIDALIAS ggalias
+ASSUMETARGETDEFS
+DISCARDFILE ./direrr/rephr.dsc, APPEND, MEGABYTES 100
+PARALLELISM 4
+MAXPARALLELISM 8
+BATCHSQL
+DDL INCLUDE MAPPED          <span class="cm">-- remove if DDL replication not needed</span>
+REPERROR (DEFAULT, ABEND)
+REPERROR (1403, DISCARD)
+
+MAP hr.employees,  TARGET hr.employees;
+MAP hr.departments, TARGET hr.departments;
+MAP hr.jobs,       TARGET hr.jobs;</code></pre>
+
+      <h2>Database Health Check SQL</h2>
+      <pre><code><span class="cm">-- Run on source DB to verify GoldenGate prerequisites:</span>
+<span class="kw">SELECT</span>
+  <span class="st">'DB Mode'</span>          check_name, LOG_MODE || <span class="st">' | FORCE_LOG: '</span> || FORCE_LOGGING status <span class="kw">FROM</span> V$DATABASE
+<span class="kw">UNION ALL SELECT</span>
+  <span class="st">'GGG Param'</span>,       VALUE                         <span class="kw">FROM</span> V$PARAMETER <span class="kw">WHERE</span> NAME=<span class="st">'enable_goldengate_replication'</span>
+<span class="kw">UNION ALL SELECT</span>
+  <span class="st">'Suppl. Logging'</span>,
+  <span class="st">'MIN:'</span> || SUPPLEMENTAL_LOG_DATA_MIN ||
+  <span class="st">' PK:'</span> || SUPPLEMENTAL_LOG_DATA_PK  ||
+  <span class="st">' ALL:'</span> || SUPPLEMENTAL_LOG_DATA_ALL  <span class="kw">FROM</span> V$DATABASE;
+
+<span class="cm">-- Check active archive destinations:</span>
+<span class="kw">SELECT</span> DEST_NAME, STATUS, TARGET, ARCHIVER
+<span class="kw">FROM</span>  V$ARCHIVE_DEST
+<span class="kw">WHERE</span> STATUS = <span class="st">'VALID'</span>;
+
+<span class="cm">-- Check GoldenGate statistics (if using Integrated Extract):</span>
+<span class="kw">SELECT</span> * <span class="kw">FROM</span> V$GOLDENGATE_STATS;
+
+<span class="cm">-- Check for long-running uncommitted transactions (high lag cause):</span>
+<span class="kw">SELECT</span> s.username, t.start_time, t.used_ublk, s.status
+<span class="kw">FROM</span>  v$transaction t <span class="kw">JOIN</span> v$session s <span class="kw">ON</span> t.ses_addr = s.saddr
+<span class="kw">ORDER BY</span> t.start_time;</code></pre>
+
+      <h2>Glossary</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Term</th><th>Definition</th></tr></thead>
+          <tbody>
+            <tr><td>CDC</td><td>Change Data Capture — the process of identifying and capturing data changes in a source database</td></tr>
+            <tr><td>SCN / CSN</td><td>System Change Number — Oracle's internal monotonically increasing transaction sequence identifier</td></tr>
+            <tr><td>DDL</td><td>Data Definition Language — SQL that modifies database structure (CREATE, ALTER, DROP)</td></tr>
+            <tr><td>DML</td><td>Data Manipulation Language — SQL that modifies data (INSERT, UPDATE, DELETE)</td></tr>
+            <tr><td>GGSCI</td><td>GoldenGate Software Command Interface — the primary CLI management tool</td></tr>
+            <tr><td>Integrated Extract</td><td>Extract that uses Oracle's Log Mining Server (LMS) — recommended for Oracle source databases</td></tr>
+            <tr><td>Integrated Replicat</td><td>Replicat that uses Oracle's inbound server for parallel, dependency-aware apply</td></tr>
+            <tr><td>Lag</td><td>Time delay between a change committing on source and being applied on target</td></tr>
+            <tr><td>Trail File</td><td>GoldenGate's proprietary binary file storing captured transactions — the pipeline between Extract and Replicat</td></tr>
+            <tr><td>HANDLECOLLISIONS</td><td>Replicat parameter that ignores duplicate-key and not-found errors — used during initial sync</td></tr>
+            <tr><td>ASSUMETARGETDEFS</td><td>Replicat parameter that assumes source and target have identical table structures</td></tr>
+            <tr><td>SOURCEDEFS</td><td>Points Replicat to a data definitions file (DEFGEN output) when source/target structures differ</td></tr>
+            <tr><td>CDR</td><td>Conflict Detection and Resolution — automatic policy for resolving simultaneous changes in active-active setups</td></tr>
+            <tr><td>Instantiation SCN</td><td>The SCN at which an initial load snapshot was taken — Replicat applies only changes after this point</td></tr>
+            <tr><td>PASSTHRU</td><td>Data Pump mode that forwards trail data unchanged without any transformation or filtering</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="divider">End of Course</div>
+      <div style="text-align:center;padding:32px 0 0;">
+        <p style="color:var(--text-3);font-size:14px;">Oracle GoldenGate Complete Training Course &nbsp;·&nbsp; Built for Junior DBAs &nbsp;·&nbsp; Covers OGG Classic &amp; Microservices</p>
+        <a href="#mod-landing" class="btn-primary" style="display:inline-flex;margin-top:16px;">↑ Back to Top</a>
+      </div>
+
+    </section>
+
+  </div><!-- /content -->
+</div><!-- /main -->
+
+<!-- Back to top button -->
+<button id="back-top" style="position:fixed;bottom:24px;right:24px;z-index:60;width:40px;height:40px;background:var(--navy);color:#fff;border:none;border-radius:50%;font-size:18px;cursor:pointer;opacity:0;transition:opacity .3s;box-shadow:var(--shadow-lg);">↑</button>
+
+<script src="main.js"></script>
+</body>
+</html>
